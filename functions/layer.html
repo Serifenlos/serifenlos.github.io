@@ -403,6 +403,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setmaskvisibility" class="md-nav__link">
+    setMaskVisibility
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -648,6 +655,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setmaskvisibility" class="md-nav__link">
+    setMaskVisibility
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -862,11 +876,44 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/setLayerOpacity.js"></a></p>
+<h3 id="setmaskvisibility">setMaskVisibility<a class="headerlink" href="#setmaskvisibility" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="setMaskVisibility(_set);"></button></p>
+<details><summary>setMaskVisibility(_set);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">setMaskVisibility</span><span class="p">(</span><span class="nx">_set</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">_set</span> <span class="o">==</span> <span class="kc">false</span> <span class="o">||</span> <span class="nx">_set</span> <span class="o">==</span> <span class="s2">&quot;hide&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="kd">var</span> <span class="nx">_setX</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">_set</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">||</span> <span class="nx">_set</span> <span class="o">==</span> <span class="s2">&quot;show&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="kd">var</span> <span class="nx">_setX</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">_set</span> <span class="o">==</span> <span class="s2">&quot;toggle&quot;</span> <span class="o">||</span> <span class="nx">_set</span> <span class="o">==</span> <span class="s2">&quot;X&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">getMaskVisibility</span><span class="p">())</span> <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="kd">var</span> <span class="nx">_setX</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span>            <span class="kd">var</span> <span class="nx">_setX</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="nx">d2</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;userMaskEnabled&quot;</span><span class="p">),</span> <span class="nx">_setX</span><span class="p">);</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="25 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span><span class="c1">// setMaskVisibility(true)</span>
+<span class="linenos" data-linenos="28 "></span><span class="c1">// setMaskVisibility(false)</span>
+<span class="linenos" data-linenos="29 "></span><span class="c1">// setMaskVisibility(&quot;toggle&quot;);</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/setMaskVisibility.js"></a></p>
 <div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
 <ul>
 <li>check</li>
-<li>setMaskVisibility</li>
 </ul>
 </div>
                 

@@ -1,0 +1,906 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
+    
+    
+      
+        <title>layer - SimonScript.jsx</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#layerjsx" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SimonScript.jsx" class="md-header__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
+      
+  <img src="../assets/images/SS_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SimonScript.jsx
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              layer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Serifenlos/SimonScript" title="Quellcode" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SimonScript.jsx" class="md-nav__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
+      
+  <img src="../assets/images/SS_logo.svg" alt="logo">
+
+    </a>
+    SimonScript.jsx
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Serifenlos/SimonScript" title="Quellcode" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        PhotoshopScripts
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PhotoshopScripts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          PhotoshopScripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS_Scripts/startschuss.html" class="md-nav__link">
+        Startschuss
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS_Scripts/schlussschuss.html" class="md-nav__link">
+        Schlußschuss
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        functions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="functions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basic.html" class="md-nav__link">
+        basic
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dialog.html" class="md-nav__link">
+        dialog
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="layer.html" class="md-nav__link md-nav__link--active">
+        layer
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fixmask" class="md-nav__link">
+    fixMask
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixmaskdens" class="md-nav__link">
+    fixMaskDens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixmaskfeather" class="md-nav__link">
+    fixMaskFeather
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixmask_loop" class="md-nav__link">
+    fixMask_loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_transform" class="md-nav__link">
+    layer_transform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectlayerbyselector" class="md-nav__link">
+    selectLayerBySelector
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="loopFiles.html" class="md-nav__link">
+        loopFiles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LUT-burn.html" class="md-nav__link">
+        LUT-burn
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LUT-dodge.html" class="md-nav__link">
+        LUT-dodge
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="utils.html" class="md-nav__link">
+        utils
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="meta.html" class="md-nav__link">
+        meta
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ready.html" class="md-nav__link">
+        ready
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="save.html" class="md-nav__link">
+        save
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="view.html" class="md-nav__link">
+        view
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        helpful
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="helpful" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          helpful
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helpful/snippets.html" class="md-nav__link">
+        snippets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helpful/charID.html" class="md-nav__link">
+        charID
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fixmask" class="md-nav__link">
+    fixMask
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixmaskdens" class="md-nav__link">
+    fixMaskDens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixmaskfeather" class="md-nav__link">
+    fixMaskFeather
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixmask_loop" class="md-nav__link">
+    fixMask_loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_transform" class="md-nav__link">
+    layer_transform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectlayerbyselector" class="md-nav__link">
+    selectLayerBySelector
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="layerjsx">LAYER.jsx<a class="headerlink" href="#layerjsx" title="Permanent link">&para;</a></h1>
+<h3 id="fixmask">fixMask<a class="headerlink" href="#fixmask" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="fixMask(_idx, _width_faktor);"></button></p>
+<details><summary>fixMask(_idx, _width_faktor);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">fixMask</span><span class="p">(</span><span class="nx">_idx</span><span class="p">,</span> <span class="nx">_width_faktor</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">sTID</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_idx</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="kd">var</span> <span class="nx">e</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="kd">var</span> <span class="nx">feather</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">getUnitDoubleValue</span><span class="p">(</span><span class="nx">sTID</span><span class="p">(</span><span class="s1">&#39;userMaskFeather&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="kd">var</span> <span class="nx">dens</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">getUnitDoubleValue</span><span class="p">(</span><span class="nx">sTID</span><span class="p">(</span><span class="s1">&#39;userMaskDensity&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">feather</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">_idx</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>            <span class="nx">gotoMask</span><span class="p">();</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="nx">setMaskFeatherTo</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="nx">fixMaskFeather</span><span class="p">(</span><span class="nx">feather</span> <span class="o">*</span> <span class="nx">_width_faktor</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">dens</span> <span class="o">&lt;</span> <span class="mf">255</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>            <span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">_idx</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span>            <span class="nx">gotoMask</span><span class="p">();</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="nx">setMaskDensityTo</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>
+<span class="linenos" data-linenos="18 "></span>            <span class="nx">fixMaskDens</span><span class="p">((</span><span class="nx">dens</span> <span class="o">-</span> <span class="mf">255</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="kc">false</span><span class="p">;}</span>
+<span class="linenos" data-linenos="22 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/fixMask.js"></a></p>
+<h3 id="fixmaskdens">fixMaskDens<a class="headerlink" href="#fixmaskdens" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="fixMaskDens(_dens);"></button></p>
+<details><summary>fixMaskDens(_dens);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">fixMaskDens</span><span class="p">(</span><span class="nx">_dens</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="kd">var</span> <span class="nx">l2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKind&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKindType&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKindCustom&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nx">l2</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">_dens</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nx">l2</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="mf">255</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">),</span> <span class="nx">l2</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nx">l</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;levelsAdjustment&quot;</span><span class="p">),</span> <span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;adjustment&quot;</span><span class="p">),</span> <span class="nx">l</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;levels&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/fixMaskDens.js"></a></p>
+<h3 id="fixmaskfeather">fixMaskFeather<a class="headerlink" href="#fixmaskfeather" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="fixMaskFeather(_feather);"></button></p>
+<details><summary>fixMaskFeather(_feather);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">fixMaskFeather</span><span class="p">(</span><span class="nx">_feather</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;radius&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;pixelsUnit&quot;</span><span class="p">),</span> <span class="nx">_feather</span><span class="p">);</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;gaussianBlur&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/fixMaskFeather.js"></a></p>
+<h3 id="fixmask_loop">fixMask_loop<a class="headerlink" href="#fixmask_loop" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="fixMaskLoop(__width_faktor);"></button></p>
+<details><summary>fixMaskLoop(__width_faktor);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">fixMaskLoop</span><span class="p">(</span><span class="nx">__width_faktor</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="kd">var</span> <span class="nx">startLayer</span> <span class="o">=</span> <span class="nx">getActiveLayerIndex</span><span class="p">();</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="k">while</span> <span class="p">(</span><span class="nx">fixMask</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">__width_faktor</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="5 "></span>        <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="p">};</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">startLayer</span><span class="p">);</span>
+<span class="linenos" data-linenos="8 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/fixMask_loop.js"></a></p>
+<h3 id="layer_transform">layer_transform<a class="headerlink" href="#layer_transform" title="Permanent link">&para;</a></h3>
+<p><mark>TODO lieber &ldquo;_relation&rdquo; statt &ldquo;_unit&rdquo;</mark></p>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_transform(_point, _moveX, _moveY, _transformX, _transformY, _unit, _linked);"></button></p>
+<details><summary>layer_transform(_point, _moveX, _moveY, _transformX, _transformY, _unit, _linked);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_transform</span><span class="p">(</span><span class="nx">_point</span><span class="p">,</span> <span class="nx">_moveX</span><span class="p">,</span> <span class="nx">_moveY</span><span class="p">,</span> <span class="nx">_transformX</span><span class="p">,</span> <span class="nx">_transformY</span><span class="p">,</span> <span class="nx">_unit</span><span class="p">,</span> <span class="nx">_linked</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="c1">// alert(&quot;point &quot; + _point + &quot;\nmoveX &quot; + _moveX + &quot;\nmoveY &quot; + _moveY + &quot;\ntransformX &quot; + _transformX + &quot;\ntransformY &quot; + _transformY + &quot;\nunit &quot; + _unit + &quot;\nlinked &quot; + _linked)</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="c1">// die Positionierung ist leider buggy, oder??</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;topleft&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSCorner0&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;topcenter&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSSide0&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;topright&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSCorner1&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;midleft&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSSide3&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;midcenter&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSAverage&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;midright&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSSide1&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;bottomleft&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSCorner3&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;bottomcenter&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSSide2&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_point</span> <span class="o">==</span> <span class="s2">&quot;bottomright&quot;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSCorner2&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="k">else</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_pointX</span> <span class="o">=</span> <span class="s2">&quot;QCSCorner0&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;layer&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;ordinal&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;targetEnum&quot;</span> <span class="p">));</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;null&quot;</span> <span class="p">),</span> <span class="nx">r</span> <span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;freeTransformCenterState&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;quadCenterState&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="nx">_pointX</span><span class="p">));</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;horizontal&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;pixelsUnit&quot;</span> <span class="p">),</span> <span class="nx">_moveX</span> <span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;vertical&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;pixelsUnit&quot;</span> <span class="p">),</span> <span class="nx">_moveY</span> <span class="p">);</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;offset&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;offset&quot;</span> <span class="p">),</span> <span class="nx">d2</span> <span class="p">);</span>
+<span class="linenos" data-linenos="27 "></span>
+<span class="linenos" data-linenos="28 "></span>    <span class="k">if</span><span class="p">(</span><span class="nx">_unit</span> <span class="o">==</span> <span class="s2">&quot;%_canvas&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="29 "></span>        <span class="kd">var</span> <span class="nx">layer_width</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="linenos" data-linenos="30 "></span>        <span class="kd">var</span> <span class="nx">layer_height</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
+<span class="linenos" data-linenos="31 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="nx">layer_width</span> <span class="o">*</span> <span class="nx">_transformX</span><span class="p">);</span>
+<span class="linenos" data-linenos="32 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span> <span class="nx">layer_height</span> <span class="o">*</span> <span class="nx">_transformY</span><span class="p">);</span>
+<span class="linenos" data-linenos="33 "></span>        <span class="c1">// alert(doc_layer_width + &quot; &quot; + doc_layer_height)</span>
+<span class="linenos" data-linenos="34 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformX</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_width</span><span class="p">)}</span>
+<span class="linenos" data-linenos="35 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformY</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_height</span><span class="p">)}</span>
+<span class="linenos" data-linenos="36 "></span>
+<span class="linenos" data-linenos="37 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_unit</span> <span class="o">==</span> <span class="s2">&quot;%_layer&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="38 "></span>        <span class="kd">var</span> <span class="nx">layer_width</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="linenos" data-linenos="39 "></span>        <span class="kd">var</span> <span class="nx">layer_height</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
+<span class="linenos" data-linenos="40 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">layer_width</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">width</span> <span class="o">*</span> <span class="nx">_transformX</span> <span class="o">*</span> <span class="mf">10</span><span class="p">);</span>
+<span class="linenos" data-linenos="41 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">layer_height</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">height</span> <span class="o">*</span> <span class="nx">_transformY</span> <span class="o">*</span> <span class="mf">10</span><span class="p">);</span>
+<span class="linenos" data-linenos="42 "></span>        <span class="c1">// alert(doc_layer_width + &quot; &quot; + doc_layer_height);</span>
+<span class="linenos" data-linenos="43 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformX</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_width</span><span class="p">)}</span>
+<span class="linenos" data-linenos="44 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformY</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_height</span><span class="p">)}</span>
+<span class="linenos" data-linenos="45 "></span>
+<span class="linenos" data-linenos="46 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_unit</span> <span class="o">==</span> <span class="s2">&quot;px&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="47 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span>  <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">_transformX</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">width</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
+<span class="linenos" data-linenos="48 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">_transformY</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">height</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
+<span class="linenos" data-linenos="49 "></span>        <span class="c1">// alert(doc_layer_width + &quot; &quot; + doc_layer_height)</span>
+<span class="linenos" data-linenos="50 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformX</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_width</span><span class="p">)}</span>
+<span class="linenos" data-linenos="51 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformY</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_height</span><span class="p">)}</span>
+<span class="linenos" data-linenos="52 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="53 "></span>
+<span class="linenos" data-linenos="54 "></span>    <span class="k">if</span><span class="p">((</span><span class="nx">_transformX</span> <span class="o">||</span> <span class="nx">_transformY</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">_linked</span><span class="p">))</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;linked&quot;</span> <span class="p">),</span> <span class="nx">_linked</span> <span class="p">);}</span>
+<span class="linenos" data-linenos="55 "></span>
+<span class="linenos" data-linenos="56 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;interfaceIconFrameDimmed&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;interpolationType&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;bicubic&quot;</span> <span class="p">));</span>
+<span class="linenos" data-linenos="57 "></span>    <span class="nx">executeAction</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;transform&quot;</span> <span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span> <span class="p">);</span>
+<span class="linenos" data-linenos="58 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_transform.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">preferences</span><span class="p">.</span><span class="nx">rulerUnits</span><span class="p">;</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">preferences</span><span class="p">.</span><span class="nx">rulerUnits</span> <span class="o">=</span> <span class="nx">Units</span><span class="p">.</span><span class="nx">PIXELS</span><span class="p">;</span>
+<span class="nx">layer_transform</span><span class="p">(</span><span class="s2">&quot;topleft&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">*</span> <span class="o">-</span><span class="mf">1</span><span class="p">),</span> <span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">*</span> <span class="o">-</span><span class="mf">1</span><span class="p">),</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="s2">&quot;%_canvas&quot;</span><span class="p">,</span> <span class="nx">t</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">preferences</span><span class="p">.</span><span class="nx">rulerUnits</span> <span class="o">=</span> <span class="nx">r</span><span class="p">;</span>  
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_point <code class="highlight"><span class="err">topleft</span></code> <code class="highlight"><span class="err">topcenter</span></code> <code class="highlight"><span class="err">topright</span></code> <code class="highlight"><span class="err">midleft</span></code> <code class="highlight"><span class="err">midcenter</span></code> <code class="highlight"><span class="err">midright</span></code> <code class="highlight"><span class="err">bottomleft</span></code> <code class="highlight"><span class="err">bottomcenter</span></code> <code class="highlight"><span class="err">bottomright</span></code></li>
+<li>_moveX </li>
+<li>_moveY</li>
+<li>_transformX <code class="highlight"><span class="err">number</span></code> </li>
+<li>_transformY <code class="highlight"><span class="err">number</span></code> </li>
+<li>_unit <code class="highlight"><span class="nf">%_canvas</span></code> <code class="highlight"><span class="nf">%_layer</span></code> <code class="highlight"><span class="err">px</span></code></li>
+<li>_linked <code class="highlight"><span class="err">hab keinen Effekt beobachtet</span></code></li>
+</ul>
+</details>
+</details>
+<h3 id="selectlayerbyselector">selectLayerBySelector<a class="headerlink" href="#selectlayerbyselector" title="Permanent link">&para;</a></h3>
+<p>select Layer by Name <mark>TODO by IDX</mark></p>
+<p class="btn_p"><button class="btn" data-clipboard-text="selectLayerBySelector(_selector, _add);"></button></p>
+<details><summary>selectLayerBySelector(_selector, _add);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">selectLayerBySelector</span><span class="p">(</span><span class="nx">_selector</span><span class="p">,</span> <span class="nx">_add</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//TODO select by IDX</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="c1">// var list = new ActionList();</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_add</span> <span class="o">==</span> <span class="s2">&quot;remove&quot;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">_add</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;removeFromSelection&quot;</span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;addToSelection&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_selector</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;selectionModifier&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;selectionModifierType&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="nx">addX</span><span class="p">));</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;makeVisible&quot;</span><span class="p">),</span> <span class="kc">false</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="c1">// list.putInteger( 65 );</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="c1">// list.putInteger( 66 );</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="c1">// d.putList( s2t( &quot;layerID&quot; ), list );</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="17 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/selectLayerBySelector.js"></a></p>
+<div class="admonition warning show">
+<p class="admonition-title">not documented functions</p>
+<ul>
+<li>check</li>
+<li>getMaskVisibility</li>
+<li>setLayerOpacity</li>
+<li>setMaskVisibility</li>
+</ul>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="dialog.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: dialog" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              dialog
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="loopFiles.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: loopFiles" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              loopFiles
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+
+<script src="../assets/javascripts/iframe-worker.js"></script>
+<script src="../search/search_index.js"></script>
+
+
+    
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="../assets/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,930 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
+    
+    
+      
+        <title>snippets - SimonScript.jsx</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#snippets" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SimonScript.jsx" class="md-header__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
+      
+  <img src="../assets/images/SS_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SimonScript.jsx
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              snippets
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Serifenlos/SimonScript" title="Quellcode" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SimonScript.jsx" class="md-nav__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
+      
+  <img src="../assets/images/SS_logo.svg" alt="logo">
+
+    </a>
+    SimonScript.jsx
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Serifenlos/SimonScript" title="Quellcode" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        PhotoshopScripts
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PhotoshopScripts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          PhotoshopScripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS_Scripts/startschuss.html" class="md-nav__link">
+        Startschuss
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS_Scripts/schlussschuss.html" class="md-nav__link">
+        Schlußschuss
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        functions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="functions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          functions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/basic.html" class="md-nav__link">
+        basic
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/dialog.html" class="md-nav__link">
+        dialog
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/layer.html" class="md-nav__link">
+        layer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/loopFiles.html" class="md-nav__link">
+        loopFiles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/LUT-burn.html" class="md-nav__link">
+        LUT-burn
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/LUT-dodge.html" class="md-nav__link">
+        LUT-dodge
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/utils.html" class="md-nav__link">
+        utils
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/meta.html" class="md-nav__link">
+        meta
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/ready.html" class="md-nav__link">
+        ready
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/save.html" class="md-nav__link">
+        save
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/view.html" class="md-nav__link">
+        view
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        helpful
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="helpful" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          helpful
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          snippets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="snippets.html" class="md-nav__link md-nav__link--active">
+        snippets
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    Loop
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-opened-docs" class="md-nav__link">
+    Loop through opened docs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-selected-folder-with-subfolder" class="md-nav__link">
+    Loop through selected folder with subfolder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-selected-folder" class="md-nav__link">
+    Loop through selected folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-brigde-ausgewahlte" class="md-nav__link">
+    In Brigde ausgewählte
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gettool-settool" class="md-nav__link">
+    getTool &amp; setTool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="charID.html" class="md-nav__link">
+        charID
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    Loop
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-opened-docs" class="md-nav__link">
+    Loop through opened docs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-selected-folder-with-subfolder" class="md-nav__link">
+    Loop through selected folder with subfolder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-through-selected-folder" class="md-nav__link">
+    Loop through selected folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-brigde-ausgewahlte" class="md-nav__link">
+    In Brigde ausgewählte
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gettool-settool" class="md-nav__link">
+    getTool &amp; setTool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="snippets">Snippets<a class="headerlink" href="#snippets" title="Permanent link">&para;</a></h1>
+<h2 id="loop">Loop<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h2>
+<h3 id="loop-through-opened-docs">Loop through opened docs<a class="headerlink" href="#loop-through-opened-docs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">loopOpenDocs</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">firstDoc</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">app</span><span class="p">.</span><span class="nx">documents</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">documents</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">;</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="cm">/* PUT CODE HERE */</span>
+
+        <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="p">};</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span> <span class="o">=</span> <span class="nx">firstDoc</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="loop-through-selected-folder-with-subfolder">Loop through selected folder with subfolder<a class="headerlink" href="#loop-through-selected-folder-with-subfolder" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">folders</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">var</span> <span class="nx">topLevel</span> <span class="o">=</span> <span class="nx">Folder</span><span class="p">.</span><span class="nx">selectDialog</span><span class="p">(</span><span class="s2">&quot;Wähle den obersten Ordner aus. \nDie Unterordner werden auch mitverarbeitet.&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">topLevel</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+    <span class="nx">folders</span> <span class="o">=</span> <span class="nx">FindAllFolders</span><span class="p">(</span><span class="nx">topLevel</span><span class="p">,</span> <span class="nx">folders</span><span class="p">);</span>
+    <span class="nx">folders</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="nx">topLevel</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">a</span> <span class="k">in</span> <span class="nx">folders</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">files</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="c1">// files = folders[a].getFiles(/.+\.(jpg|tif|psd|bmp|gif|png|)$/i);</span>
+        <span class="nx">files</span> <span class="o">=</span> <span class="nx">folders</span><span class="p">[</span><span class="nx">a</span><span class="p">].</span><span class="nx">getFiles</span><span class="p">(</span><span class="sr">/.+\.(tif|psd)$/i</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">files</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mf">1</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">b</span> <span class="k">in</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">thisFile</span> <span class="o">=</span> <span class="nx">files</span><span class="p">[</span><span class="nx">b</span><span class="p">];</span>
+            <span class="kd">var</span> <span class="nx">doc_file</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">thisFile</span><span class="p">);</span>
+            <span class="nx">app</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">doc_file</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">;</span>
+
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="cm">/* PUT CODE HERE */</span>
+
+            <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">function</span> <span class="nx">FindAllFolders</span><span class="p">(</span><span class="nx">srcFolderStr</span><span class="p">,</span> <span class="nx">destArray</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">fileFolderArray</span> <span class="o">=</span> <span class="nx">Folder</span><span class="p">(</span><span class="nx">srcFolderStr</span><span class="p">).</span><span class="nx">getFiles</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">fileFolderArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">fileFoldObj</span> <span class="o">=</span> <span class="nx">fileFolderArray</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">fileFoldObj</span> <span class="k">instanceof</span> <span class="nx">File</span><span class="p">)</span> <span class="p">{}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">destArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">Folder</span><span class="p">(</span><span class="nx">fileFoldObj</span><span class="p">));</span>
+                <span class="nx">FindAllFolders</span><span class="p">(</span><span class="nx">fileFoldObj</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span> <span class="nx">destArray</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">destArray</span><span class="p">;</span>
+    <span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="loop-through-selected-folder">Loop through selected folder<a class="headerlink" href="#loop-through-selected-folder" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">documents</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">inputFolder</span> <span class="o">=</span> <span class="nx">Folder</span><span class="p">.</span><span class="nx">selectDialog</span><span class="p">(</span><span class="s2">&quot;Bitte wähle den Input-Ordner aus\n Unterordner werden nicht ausgewertet\nDie ausgespielten Dateien werden im Unterorder &#39;output&#39; abgelegt&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">fileList</span> <span class="o">=</span> <span class="nx">inputFolder</span><span class="p">.</span><span class="nx">getFiles</span><span class="p">(</span><span class="sr">/.+\.(jpg|tif|psd|psb|bmp|gif|png|)$/i</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">outputFolder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Folder</span><span class="p">(</span><span class="nx">inputFolder</span> <span class="o">+</span> <span class="s2">&quot;/output&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">outputFolder</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">outputFolder</span><span class="p">.</span><span class="nx">create</span><span class="p">()</span>
+    <span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">fileList</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">thisFile</span> <span class="o">=</span> <span class="nx">fileList</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">doc_file</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">thisFile</span><span class="p">);</span>
+        <span class="nx">app</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">doc_file</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">;</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="cm">/* PUT CODE HERE */</span>
+
+        <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+        <span class="nx">doc</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">SaveOptions</span><span class="p">.</span><span class="nx">DONOTSAVECHANGES</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Abruch\nschließe bitte vorerst alle Dokumente!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="in-brigde-ausgewahlte">In Brigde ausgewählte<a class="headerlink" href="#in-brigde-ausgewahlte" title="Permanent link">&para;</a></h3>
+<p><mark>TODO</mark></p>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<h3 id="gettool-settool">getTool &amp; setTool<a class="headerlink" href="#gettool-settool" title="Permanent link">&para;</a></h3>
+<p><em><a href="https://stackoverflow.com/a/29110173">https://stackoverflow.com/a/29110173</a></em></p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">getTool</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;paintbrushTool&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setTool</span><span class="p">(</span><span class="s1">&#39;eraserTool&#39;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">setTool</span><span class="p">(</span><span class="s1">&#39;paintbrushTool&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// https://forums.adobe.com/thread/579195</span>
+<span class="kd">function</span> <span class="nx">getTool</span><span class="p">(){</span>  
+    <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>   
+    <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;capp&quot;</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;Ordn&quot;</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;Trgt&quot;</span><span class="p">)</span> <span class="p">);</span>   
+    <span class="kd">var</span> <span class="nx">cTool</span> <span class="o">=</span> <span class="nx">typeIDToStringID</span><span class="p">(</span><span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref</span><span class="p">).</span><span class="nx">getEnumerationType</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;tool&#39;</span><span class="p">)));</span>  
+    <span class="k">return</span> <span class="nx">cTool</span><span class="p">;</span>  
+<span class="p">}</span>
+
+<span class="c1">// https://www.ps-scripts.com/viewtopic.php?f=68&amp;t=11342&amp;p=152772</span>
+<span class="kd">function</span> <span class="nx">setTool</span><span class="p">(</span><span class="nx">tool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">desc9</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">ref7</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+    <span class="nx">ref7</span><span class="p">.</span><span class="nx">putClass</span><span class="p">(</span> <span class="nx">app</span><span class="p">.</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="nx">tool</span><span class="p">)</span> <span class="p">);</span>
+    <span class="nx">desc9</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span> <span class="nx">app</span><span class="p">.</span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s1">&#39;null&#39;</span><span class="p">),</span> <span class="nx">ref7</span> <span class="p">);</span>
+    <span class="nx">executeAction</span><span class="p">(</span> <span class="nx">app</span><span class="p">.</span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s1">&#39;slct&#39;</span><span class="p">),</span> <span class="nx">desc9</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span> <span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// Tool names (use quoted strings, e.g. &#39;moveTool&#39;)</span>
+<span class="c1">// moveTool</span>
+<span class="c1">// marqueeRectTool</span>
+<span class="c1">// marqueeEllipTool</span>
+<span class="c1">// marqueeSingleRowTool</span>
+<span class="c1">// marqueeSingleColumnTool</span>
+<span class="c1">// lassoTool</span>
+<span class="c1">// polySelTool</span>
+<span class="c1">// magneticLassoTool</span>
+<span class="c1">// quickSelectTool</span>
+<span class="c1">// magicWandTool</span>
+<span class="c1">// cropTool</span>
+<span class="c1">// sliceTool</span>
+<span class="c1">// sliceSelectTool</span>
+<span class="c1">// spotHealingBrushTool</span>
+<span class="c1">// magicStampTool</span>
+<span class="c1">// patchSelection</span>
+<span class="c1">// redEyeTool</span>
+<span class="c1">// paintbrushTool</span>
+<span class="c1">// pencilTool</span>
+<span class="c1">// colorReplacementBrushTool</span>
+<span class="c1">// cloneStampTool</span>
+<span class="c1">// patternStampTool</span>
+<span class="c1">// historyBrushTool</span>
+<span class="c1">// artBrushTool</span>
+<span class="c1">// eraserTool</span>
+<span class="c1">// backgroundEraserTool</span>
+<span class="c1">// magicEraserTool</span>
+<span class="c1">// gradientTool</span>
+<span class="c1">// bucketTool</span>
+<span class="c1">// blurTool</span>
+<span class="c1">// sharpenTool</span>
+<span class="c1">// smudgeTool</span>
+<span class="c1">// dodgeTool</span>
+<span class="c1">// burnInTool</span>
+<span class="c1">// saturationTool</span>
+<span class="c1">// penTool</span>
+<span class="c1">// freeformPenTool</span>
+<span class="c1">// addKnotTool</span>
+<span class="c1">// deleteKnotTool</span>
+<span class="c1">// convertKnotTool</span>
+<span class="c1">// typeCreateOrEditTool</span>
+<span class="c1">// typeVerticalCreateOrEditTool</span>
+<span class="c1">// typeCreateMaskTool</span>
+<span class="c1">// typeVerticalCreateMaskTool</span>
+<span class="c1">// pathComponentSelectTool</span>
+<span class="c1">// directSelectTool</span>
+<span class="c1">// rectangleTool</span>
+<span class="c1">// roundedRectangleTool</span>
+<span class="c1">// ellipseTool</span>
+<span class="c1">// polygonTool</span>
+<span class="c1">// lineTool</span>
+<span class="c1">// customShapeTool</span>
+<span class="c1">// textAnnotTool</span>
+<span class="c1">// soundAnnotTool</span>
+<span class="c1">// eyedropperTool</span>
+<span class="c1">// colorSamplerTool</span>
+<span class="c1">// rulerTool</span>
+<span class="c1">// handTool</span>
+<span class="c1">// zoomTool</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../functions/view.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: view" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              view
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="charID.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: charID" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              charID
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+
+<script src="../assets/javascripts/iframe-worker.js"></script>
+<script src="../search/search_index.js"></script>
+
+
+    
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="../assets/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

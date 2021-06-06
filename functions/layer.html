@@ -396,6 +396,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setlayeropacity" class="md-nav__link">
+    setLayerOpacity
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -634,6 +641,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setlayeropacity" class="md-nav__link">
+    setLayerOpacity
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -833,12 +847,25 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/getMaskVisibility.js"></a></p>
+<h3 id="setlayeropacity">setLayerOpacity<a class="headerlink" href="#setlayeropacity" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="setLayerOpacity(_opacity);"></button></p>
+<details><summary>setLayerOpacity(_opacity);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">setLayerOpacity</span><span class="p">(</span><span class="nx">_opacity</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;opacity&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">_opacity</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/setLayerOpacity.js"></a></p>
 <div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
 <ul>
 <li>check</li>
-<li>getMaskVisibility</li>
-<li>setLayerOpacity</li>
 <li>setMaskVisibility</li>
 </ul>
 </div>

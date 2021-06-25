@@ -9,8 +9,10 @@
       
       
       
+        <link rel="canonical" href="https://serifenlos.github.io/functions/layer.html">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -44,6 +46,8 @@
     
     
       
+
+
     
     
   </head>
@@ -76,7 +80,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="SimonScript.jsx" class="md-header__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
+    <a href="../index.html" title="SimonScript.jsx" class="md-header__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
       
   <img src="../assets/images/SS_logo.svg" alt="logo">
 
@@ -168,7 +172,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="SimonScript.jsx" class="md-nav__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
+    <a href="../index.html" title="SimonScript.jsx" class="md-nav__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
       
   <img src="../assets/images/SS_logo.svg" alt="logo">
 
@@ -406,6 +410,34 @@
         <li class="md-nav__item">
   <a href="#setmaskvisibility" class="md-nav__link">
     setMaskVisibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkexistence" class="md-nav__link">
+    checkExistence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getidxbystring" class="md-nav__link">
+    getIDXbyString
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getname" class="md-nav__link">
+    getName
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solidcolorhsb_change" class="md-nav__link">
+    solidColorHSB_change
   </a>
   
 </li>
@@ -662,6 +694,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#checkexistence" class="md-nav__link">
+    checkExistence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getidxbystring" class="md-nav__link">
+    getIDXbyString
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getname" class="md-nav__link">
+    getName
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solidcolorhsb_change" class="md-nav__link">
+    solidColorHSB_change
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -779,26 +839,26 @@
 <span class="linenos" data-linenos="26 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;offset&quot;</span> <span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span> <span class="s2">&quot;offset&quot;</span> <span class="p">),</span> <span class="nx">d2</span> <span class="p">);</span>
 <span class="linenos" data-linenos="27 "></span>
 <span class="linenos" data-linenos="28 "></span>    <span class="k">if</span><span class="p">(</span><span class="nx">_unit</span> <span class="o">==</span> <span class="s2">&quot;%_canvas&quot;</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="29 "></span>        <span class="kd">var</span> <span class="nx">layer_width</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
-<span class="linenos" data-linenos="30 "></span>        <span class="kd">var</span> <span class="nx">layer_height</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
-<span class="linenos" data-linenos="31 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="nx">layer_width</span> <span class="o">*</span> <span class="nx">_transformX</span><span class="p">);</span>
-<span class="linenos" data-linenos="32 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span> <span class="nx">layer_height</span> <span class="o">*</span> <span class="nx">_transformY</span><span class="p">);</span>
+<span class="linenos" data-linenos="29 "></span>        <span class="kd">var</span> <span class="nx">layer_width</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">-</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="linenos" data-linenos="30 "></span>        <span class="kd">var</span> <span class="nx">layer_height</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span> <span class="o">-</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
+<span class="linenos" data-linenos="31 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="nx">layer_width</span> <span class="o">*</span> <span class="nx">_transformX</span><span class="p">);</span>
+<span class="linenos" data-linenos="32 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span> <span class="nx">layer_height</span> <span class="o">*</span> <span class="nx">_transformY</span><span class="p">);</span>
 <span class="linenos" data-linenos="33 "></span>        <span class="c1">// alert(doc_layer_width + &quot; &quot; + doc_layer_height)</span>
 <span class="linenos" data-linenos="34 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformX</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_width</span><span class="p">)}</span>
 <span class="linenos" data-linenos="35 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformY</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_height</span><span class="p">)}</span>
 <span class="linenos" data-linenos="36 "></span>
 <span class="linenos" data-linenos="37 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_unit</span> <span class="o">==</span> <span class="s2">&quot;%_layer&quot;</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="38 "></span>        <span class="kd">var</span> <span class="nx">layer_width</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
-<span class="linenos" data-linenos="39 "></span>        <span class="kd">var</span> <span class="nx">layer_height</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span> <span class="o">-</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
-<span class="linenos" data-linenos="40 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">layer_width</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">width</span> <span class="o">*</span> <span class="nx">_transformX</span> <span class="o">*</span> <span class="mf">10</span><span class="p">);</span>
-<span class="linenos" data-linenos="41 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">layer_height</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">height</span> <span class="o">*</span> <span class="nx">_transformY</span> <span class="o">*</span> <span class="mf">10</span><span class="p">);</span>
+<span class="linenos" data-linenos="38 "></span>        <span class="kd">var</span> <span class="nx">layer_width</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">-</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="linenos" data-linenos="39 "></span>        <span class="kd">var</span> <span class="nx">layer_height</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span> <span class="o">-</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
+<span class="linenos" data-linenos="40 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">layer_width</span> <span class="o">/</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">width</span> <span class="o">*</span> <span class="nx">_transformX</span> <span class="o">*</span> <span class="mf">10</span><span class="p">);</span>
+<span class="linenos" data-linenos="41 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">layer_height</span> <span class="o">/</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">height</span> <span class="o">*</span> <span class="nx">_transformY</span> <span class="o">*</span> <span class="mf">10</span><span class="p">);</span>
 <span class="linenos" data-linenos="42 "></span>        <span class="c1">// alert(doc_layer_width + &quot; &quot; + doc_layer_height);</span>
 <span class="linenos" data-linenos="43 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformX</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_width</span><span class="p">)}</span>
 <span class="linenos" data-linenos="44 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformY</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_height</span><span class="p">)}</span>
 <span class="linenos" data-linenos="45 "></span>
 <span class="linenos" data-linenos="46 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">_unit</span> <span class="o">==</span> <span class="s2">&quot;px&quot;</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="47 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span>  <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">_transformX</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">width</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
-<span class="linenos" data-linenos="48 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">_transformY</span> <span class="o">/</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">height</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
+<span class="linenos" data-linenos="47 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_width</span> <span class="o">=</span>  <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">_transformX</span> <span class="o">/</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">width</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
+<span class="linenos" data-linenos="48 "></span>        <span class="kd">var</span> <span class="nx">doc_layer_height</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">_transformY</span> <span class="o">/</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">height</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
 <span class="linenos" data-linenos="49 "></span>        <span class="c1">// alert(doc_layer_width + &quot; &quot; + doc_layer_height)</span>
 <span class="linenos" data-linenos="50 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformX</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_width</span><span class="p">)}</span>
 <span class="linenos" data-linenos="51 "></span>        <span class="k">if</span><span class="p">(</span><span class="nx">_transformY</span><span class="p">)</span> <span class="p">{</span><span class="nx">d</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">),</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">doc_layer_height</span><span class="p">)}</span>
@@ -829,25 +889,22 @@
 </details>
 </details>
 <h3 id="selectlayerbyselector">selectLayerBySelector<a class="headerlink" href="#selectlayerbyselector" title="Permanent link">&para;</a></h3>
-<p>select Layer by Name <mark>TODO by IDX</mark></p>
+<p>select Layer by Name or ID</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="selectLayerBySelector(_selector, _add);"></button></p>
-<details><summary>selectLayerBySelector(_selector, _add);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">selectLayerBySelector</span><span class="p">(</span><span class="nx">_selector</span><span class="p">,</span> <span class="nx">_add</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//TODO select by IDX</span>
+<details><summary>selectLayerBySelector(_selector, _add);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">selectLayerBySelector</span><span class="p">(</span><span class="nx">_selector</span><span class="p">,</span> <span class="nx">_add</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 4 "></span>        <span class="c1">// var list = new ActionList();</span>
-<span class="linenos" data-linenos=" 5 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_add</span> <span class="o">==</span> <span class="s2">&quot;remove&quot;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">_add</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;removeFromSelection&quot;</span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;addToSelection&quot;</span><span class="p">}</span>
-<span class="linenos" data-linenos=" 8 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_selector</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_add</span> <span class="o">==</span> <span class="s2">&quot;remove&quot;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">_add</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;removeFromSelection&quot;</span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;addToSelection&quot;</span><span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">_selector</span><span class="p">))</span> <span class="p">{</span><span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_selector</span><span class="p">)}</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">else</span> <span class="p">{</span><span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_selector</span><span class="p">)}</span>
 <span class="linenos" data-linenos=" 9 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
 <span class="linenos" data-linenos="10 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;selectionModifier&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;selectionModifierType&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="nx">addX</span><span class="p">));</span>
 <span class="linenos" data-linenos="11 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;makeVisible&quot;</span><span class="p">),</span> <span class="kc">false</span><span class="p">);</span>
-<span class="linenos" data-linenos="12 "></span>        <span class="c1">// list.putInteger( 65 );</span>
-<span class="linenos" data-linenos="13 "></span>        <span class="c1">// list.putInteger( 66 );</span>
-<span class="linenos" data-linenos="14 "></span>        <span class="c1">// d.putList( s2t( &quot;layerID&quot; ), list );</span>
-<span class="linenos" data-linenos="15 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
-<span class="linenos" data-linenos="17 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="14 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/selectLayerBySelector.js"></a></p>
@@ -910,11 +967,81 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/setMaskVisibility.js"></a></p>
-<div class="admonition warning show">
+<h3 id="checkexistence">checkExistence<a class="headerlink" href="#checkexistence" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_checkExistence(_idx);"></button></p>
+<details><summary>layer_checkExistence(_idx);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_idx</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putProperty</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;property&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;itemIndex&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_idx</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="kd">var</span> <span class="nx">getLayerIDX</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">r</span><span class="p">).</span><span class="nx">getInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;itemIndex&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_checkExistence.js"></a></p>
+<h3 id="getidxbystring">getIDXbyString<a class="headerlink" href="#getidxbystring" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_getIDXbyString(_string);"></button></p>
+<details><summary>layer_getIDXbyString(_string);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_string</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">layerIDX_array</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">while</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>            <span class="kd">var</span> <span class="nx">regex</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">_string</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">layer_getName</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">match</span><span class="p">(</span><span class="nx">regex</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>                <span class="nx">layerIDX_array</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">};</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="k">return</span> <span class="nx">layerIDX_array</span><span class="p">;</span>
+<span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_getIDXbyString.js"></a></p>
+<h3 id="getname">getName<a class="headerlink" href="#getname" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_getName(_idx);"></button></p>
+<details><summary>layer_getName(_idx);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_getName</span><span class="p">(</span><span class="nx">_idx</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="nx">ref</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;Lyr &quot;</span><span class="p">),</span> <span class="nx">_idx</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="kd">var</span> <span class="nx">layerDesc</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="kd">var</span> <span class="nx">theName</span> <span class="o">=</span> <span class="nx">layerDesc</span><span class="p">.</span><span class="nx">getString</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">return</span> <span class="nx">theName</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="k">return</span> <span class="nx">e</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_getName.js"></a></p>
+<h3 id="solidcolorhsb_change">solidColorHSB_change<a class="headerlink" href="#solidcolorhsb_change" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_solidColorHSB_change(_h, _s, _b);"></button></p>
+<details><summary>layer_solidColorHSB_change(_h, _s, _b);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_solidColorHSB_change</span><span class="p">(</span><span class="nx">_h</span><span class="p">,</span> <span class="nx">_s</span><span class="p">,</span> <span class="nx">_b</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">d3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;contentLayer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nx">d3</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;hue&#39;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;angleUnit&#39;</span><span class="p">),</span> <span class="nx">_h</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nx">d3</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;saturation&#39;</span><span class="p">),</span> <span class="nx">_s</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nx">d3</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;brightness&#39;</span><span class="p">),</span> <span class="nx">_b</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;HSBColorClass&#39;</span><span class="p">),</span> <span class="nx">d3</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;solidColorLayer&quot;</span><span class="p">),</span> <span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_solidColorHSB_change.js"></a></p>
+<div class="admonition warning hide">
 <p class="admonition-title">not documented functions</p>
-<ul>
-<li>check</li>
-</ul>
 </div>
                 
               
@@ -987,7 +1114,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
 
 <script src="../assets/javascripts/iframe-worker.js"></script>
@@ -995,7 +1122,7 @@
 
 
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
         <script src="../assets/javascripts/extra.js"></script>
       

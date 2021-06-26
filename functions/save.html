@@ -473,6 +473,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#savepsd_v2" class="md-nav__link">
+    savePSD_v2
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -614,6 +621,13 @@
         <li class="md-nav__item">
   <a href="#savefile_tif" class="md-nav__link">
     saveFile_TIF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#savepsd_v2" class="md-nav__link">
+    savePSD_v2
   </a>
   
 </li>
@@ -950,11 +964,25 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/save/saveFile_TIF.js"></a></p>
-<div class="admonition warning show">
+<h3 id="savepsd_v2">savePSD_v2<a class="headerlink" href="#savepsd_v2" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="savePSD_v2(_saveFile, _copy, _maximizeCompatibility, _lowerCase, _layers);"></button></p>
+<details><summary>savePSD_v2(_saveFile, _copy, _maximizeCompatibility, _lowerCase, _layers);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">savePSD_v2</span><span class="p">(</span><span class="nx">_saveFile</span><span class="p">,</span> <span class="nx">_copy</span><span class="p">,</span> <span class="nx">_maximizeCompatibility</span><span class="p">,</span> <span class="nx">_lowerCase</span><span class="p">,</span> <span class="nx">_layers</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;maximizeCompatibility&quot;</span><span class="p">),</span> <span class="nx">_maximizeCompatibility</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;as&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;photoshop35Format&quot;</span><span class="p">),</span> <span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putPath</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">),</span> <span class="nx">_saveFile</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;copy&quot;</span><span class="p">),</span> <span class="nx">_copy</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;lowerCase&quot;</span><span class="p">),</span> <span class="nx">_lowerCase</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layers&quot;</span><span class="p">),</span> <span class="nx">_layers</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;saveStage&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;saveStageType&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;saveSucceeded&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;save&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/save/savePSD_v2.js"></a></p>
+<div class="admonition warning hide">
 <p class="admonition-title">not documented functions</p>
-<ul>
-<li>savePSD_v2</li>
-</ul>
 </div>
                 
               

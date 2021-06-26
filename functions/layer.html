@@ -442,6 +442,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#layer_selectedidx_get" class="md-nav__link">
+    layer_selectedIDX_get
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_selectedidx_set" class="md-nav__link">
+    layer_selectedIDX_set
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -718,6 +732,20 @@
         <li class="md-nav__item">
   <a href="#solidcolorhsb_change" class="md-nav__link">
     solidColorHSB_change
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_selectedidx_get" class="md-nav__link">
+    layer_selectedIDX_get
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_selectedidx_set" class="md-nav__link">
+    layer_selectedIDX_set
   </a>
   
 </li>
@@ -1040,8 +1068,47 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_solidColorHSB_change.js"></a></p>
-<div class="admonition warning hide">
+<h3 id="layer_selectedidx_get">layer_selectedIDX_get<a class="headerlink" href="#layer_selectedidx_get" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_selectedIDX_get();"></button></p>
+<details><summary>layer_selectedIDX_get();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_selectedIDX_get</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">selectedLayers</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;ordinal&#39;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;targetEnum&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="kd">var</span> <span class="nx">desc</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">desc</span><span class="p">.</span><span class="nx">hasKey</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;targetLayers&#39;</span><span class="p">)))</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nx">desc</span> <span class="o">=</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getList</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;targetLayers&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">c</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="nx">hasBackground</span><span class="p">()</span> <span class="o">?</span> <span class="nx">selectedLayers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">desc</span><span class="p">.</span><span class="nx">getReference</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">getIndex</span><span class="p">())</span> <span class="o">:</span> <span class="nx">selectedLayers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">desc</span><span class="p">.</span><span class="nx">getReference</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">getIndex</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">return</span> <span class="nx">selectedLayers</span><span class="p">;</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">};</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_selectedIDX_get.js"></a></p>
+<h3 id="layer_selectedidx_set">layer_selectedIDX_set<a class="headerlink" href="#layer_selectedidx_set" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_selectedIDX_set(_array);"></button></p>
+<details><summary>layer_selectedIDX_set(_array);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_selectedIDX_set</span><span class="p">(</span><span class="nx">_array</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="nx">selectLayers</span><span class="p">(</span><span class="s2">&quot;selectNoLayers&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_array</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">_array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>                <span class="nx">selectLayerBySelector</span><span class="p">(</span><span class="nx">_array</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">t</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nx">selectLayers</span><span class="p">(</span><span class="s2">&quot;selectNoLayers&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_selectedIDX_set.js"></a></p>
+<div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
+<ul>
+<li>layer_selectedIDX_get</li>
+<li>layer_selectedIDX_set</li>
+</ul>
 </div>
                 
               

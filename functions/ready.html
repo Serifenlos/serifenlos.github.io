@@ -458,6 +458,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#freisteller_button" class="md-nav__link">
+    freisteller_button
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freisteller_creategroup" class="md-nav__link">
+    freisteller_createGroup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freisteller_savergb" class="md-nav__link">
+    freisteller_saveRGB
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -610,6 +631,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#freisteller_button" class="md-nav__link">
+    freisteller_button
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freisteller_creategroup" class="md-nav__link">
+    freisteller_createGroup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freisteller_savergb" class="md-nav__link">
+    freisteller_saveRGB
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -756,13 +798,88 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/ready/dodgeburn.js"></a></p>
-<div class="admonition warning show">
+<h3 id="freisteller_button">freisteller_button<a class="headerlink" href="#freisteller_button" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="freisteller_button();"></button></p>
+<details><summary>freisteller_button();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">freisteller_button</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">layerSets</span><span class="p">.</span><span class="nx">getByName</span><span class="p">(</span><span class="s2">&quot;Freisteller&quot;</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span>            <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>                <span class="kd">var</span> <span class="nx">docPath</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">path</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>                <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s1">&#39;Freisteller SaveRGB&#39;</span><span class="p">,</span> <span class="s1">&#39;freisteller_saveRGB()&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>                <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 8 "></span>            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>                <span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+<span class="linenos" data-linenos="10 "></span>            <span class="p">};</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s1">&#39;Freisteller-Gruppe&#39;</span><span class="p">,</span> <span class="s1">&#39;freisteller_createGroup()&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>            <span class="kd">var</span> <span class="nx">docPath</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">path</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span>            <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s1">&#39;Freisteller SaveRGB&#39;</span><span class="p">,</span> <span class="s1">&#39;freisteller_saveRGB()&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+<span class="linenos" data-linenos="18 "></span>        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{};</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/ready/freisteller_button.js"></a></p>
+<h3 id="freisteller_creategroup">freisteller_createGroup<a class="headerlink" href="#freisteller_creategroup" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="freisteller_createGroup();"></button></p>
+<details><summary>freisteller_createGroup();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">freisteller_createGroup</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">startLayer</span><span class="p">,</span> <span class="nx">set</span><span class="p">,</span> <span class="nx">newLayerSetRef</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">startLayer</span> <span class="o">=</span> <span class="nx">layer_selectedIDX_get</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nx">selectLayers</span><span class="p">(</span><span class="s1">&#39;selectAllLayers&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nx">createGroup</span><span class="p">(</span><span class="s2">&quot;Freisteller&quot;</span><span class="p">,</span> <span class="s2">&quot;passThrough&quot;</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="nx">t</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">isSelectionActive</span><span class="p">())</span> <span class="p">{</span>              <span class="c1">// TODO wenn Original eine Maske hat, mitnehmen</span>
+<span class="linenos" data-linenos=" 8 "></span>            <span class="nx">maskFromSelection</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nx">toogleOpenCloseSet</span><span class="p">();</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="kd">var</span> <span class="nx">set</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">layerSets</span><span class="p">.</span><span class="nx">getByName</span><span class="p">(</span><span class="s2">&quot;Freisteller&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nx">createColorLayer</span><span class="p">(</span><span class="s2">&quot;Freisteller helper&quot;</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="mf">128</span><span class="p">,</span> <span class="mf">128</span><span class="p">,</span> <span class="mf">128</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nx">hide</span><span class="p">();</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="kd">var</span> <span class="nx">newLayerSetRef</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nx">newLayerSetRef</span><span class="p">.</span><span class="nx">move</span><span class="p">(</span><span class="nx">set</span><span class="p">,</span> <span class="nx">ElementPlacement</span><span class="p">.</span><span class="nx">PLACEAFTER</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="nx">layer_selectedIDX_set</span><span class="p">(</span><span class="nx">startLayer</span><span class="p">);</span>
+<span class="linenos" data-linenos="18 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/ready/freisteller_createGroup.js"></a></p>
+<h3 id="freisteller_savergb">freisteller_saveRGB<a class="headerlink" href="#freisteller_savergb" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="freisteller_saveRGB();"></button></p>
+<details><summary>freisteller_saveRGB();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">freisteller_saveRGB</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">startLayer</span><span class="p">,</span> <span class="nx">startVisibilityHelper</span><span class="p">,</span> <span class="nx">startMaskVisibility</span><span class="p">,</span> <span class="nx">docNameCopy</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">startLayer</span> <span class="o">=</span> <span class="nx">layer_selectedIDX_get</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">startVisibilityHelper</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nx">gotoLayer</span><span class="p">(</span><span class="s2">&quot;Freisteller&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">hasLayerMask</span><span class="p">())</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="kd">var</span> <span class="nx">startMaskVisibility</span> <span class="o">=</span> <span class="nx">getMaskVisibility</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nx">setMaskVisibility</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">getLayerName</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Freisteller helper&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="kd">var</span> <span class="nx">startVisibilityHelper</span> <span class="o">=</span> <span class="nx">isVisibleIDX</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="nx">makeVisByIndex</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="kd">var</span> <span class="nx">docNameCopy</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">path</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nx">GetFileNameOnly</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-frei&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="c1">// saveFile_PSD(new File(docNameCopy), t, f, f, t, f, f);</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="nx">savePSD_v2</span><span class="p">(</span><span class="k">new</span> <span class="nx">File</span><span class="p">(</span><span class="nx">docNameCopy</span><span class="p">),</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">f</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span>        <span class="nx">setMaskVisibility</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">startVisibilityHelper</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="20 "></span>            <span class="nx">makeVisByIndex</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="nx">startVisibilityHelper</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span>        <span class="c1">// app.activeDocument.save();</span>
+<span class="linenos" data-linenos="24 "></span>        <span class="nx">setMaskVisibility</span><span class="p">(</span><span class="nx">startMaskVisibility</span><span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="nx">layer_selectedIDX_set</span><span class="p">(</span><span class="nx">startLayer</span><span class="p">);</span>
+<span class="linenos" data-linenos="27 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/ready/freisteller_saveRGB.js"></a></p>
+<div class="admonition warning hide">
 <p class="admonition-title">not documented functions</p>
-<ul>
-<li>freisteller_button</li>
-<li>freisteller_createGroup</li>
-<li>freisteller_saveRGB</li>
-</ul>
 </div>
                 
               

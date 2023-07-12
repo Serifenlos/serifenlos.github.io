@@ -718,6 +718,7 @@
                   <h1>selection</h1>
                 
                 <h3 id="select_all">select_all<a class="headerlink" href="#select_all" title="Permanent link">&para;</a></h3>
+<p>cmd a</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="select_all();"></button></p>
 <details><summary>select_all();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">select_all</span><span class="p">()</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">descriptor</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
@@ -734,17 +735,17 @@
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/select_all.js"></a></p>
 <h3 id="select_invert">select_invert<a class="headerlink" href="#select_invert" title="Permanent link">&para;</a></h3>
+<p>cmd i<br />
+oder activeDocument.selection.deselect();</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="select_invert();"></button></p>
 <details><summary>select_invert();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">select_invert</span><span class="p">()</span> <span class="p">{</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;inverse&quot;</span><span class="p">),</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
 <span class="linenos" data-linenos="3 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span><span class="c1">// Apfel Shift i</span>
-<span class="linenos" data-linenos="6 "></span><span class="c1">// oder activeDocument.selection.deselect();</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/select_invert.js"></a></p>
 <h3 id="select_luminance">select_luminance<a class="headerlink" href="#select_luminance" title="Permanent link">&para;</a></h3>
+<p>cmd alt 2</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="select_luminance();"></button></p>
 <details><summary>select_luminance();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">select_luminance</span><span class="p">()</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
@@ -757,8 +758,6 @@
 <span class="linenos" data-linenos=" 9 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span> <span class="nx">r2</span><span class="p">);</span>
 <span class="linenos" data-linenos="10 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
 <span class="linenos" data-linenos="11 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="c1">// Apfel + Alt + 2</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/select_luminance.js"></a></p>
@@ -852,6 +851,7 @@
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/selection_check.js"></a></p>
 <h3 id="selection_deselect">selection_deselect<a class="headerlink" href="#selection_deselect" title="Permanent link">&para;</a></h3>
+<p>cmd d</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="selection_deselect();"></button></p>
 <details><summary>selection_deselect();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">selection_deselect</span><span class="p">()</span> <span class="p">{</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
@@ -869,7 +869,7 @@
 <ul>
 <li>für die Selection-Scripts</li>
 <li>sucht eine Ebene, wo die spezifische Selection erlaubt ist.</li>
-<li>und stoppt wenn’s einmal durchlief und keine Ebene gefunden wurde</li>
+<li>und stoppt wenn’s einmal durchlief und keine geeignete Ebene gefunden wurde</li>
 <li>Beispiel siehe select_saturation.js</li>
 </ul>
 <p class="btn_p"><button class="btn" data-clipboard-text="selection_loop(selection_calc);"></button></p>
@@ -904,11 +904,6 @@
 <span class="linenos" data-linenos="29 "></span>        <span class="nx">loopNext</span><span class="p">();</span>
 <span class="linenos" data-linenos="30 "></span>    <span class="p">}</span>
 <span class="linenos" data-linenos="31 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="32 "></span>
-<span class="linenos" data-linenos="33 "></span><span class="c1">// für die Selection-Scripts</span>
-<span class="linenos" data-linenos="34 "></span><span class="c1">// sucht eine Ebene, wo die spezifische Selection erlaubt ist.</span>
-<span class="linenos" data-linenos="35 "></span><span class="c1">// und stoppt wenn’s einmal durchlief und keine Ebene gefunden wurde</span>
-<span class="linenos" data-linenos="36 "></span><span class="c1">// Beispiel siehe select_saturation.js</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/selection_loop.js"></a></p>

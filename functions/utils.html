@@ -311,6 +311,18 @@
   
   
     <li class="md-nav__item">
+      <a href="channel.html" class="md-nav__link">
+        channel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="dialog.html" class="md-nav__link">
         dialog
       </a>
@@ -1054,6 +1066,18 @@
     <li class="md-nav__item">
       <a href="save.html" class="md-nav__link">
         save
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="selection.html" class="md-nav__link">
+        selection
       </a>
     </li>
   
@@ -1964,20 +1988,48 @@
 <h3 id="makevisible">makeVisible<a class="headerlink" href="#makevisible" title="Permanent link">&para;</a></h3>
 <p><strong><em>action</em></strong> show Layer/Group</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="makeVisible();"></button></p>
-<details><summary>makeVisible();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">makeVisible</span><span class="p">(){</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">idShw</span> <span class="o">=</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Shw &quot;</span> <span class="p">);</span>
-<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">desc808</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 4 "></span>        <span class="kd">var</span> <span class="nx">idnull</span> <span class="o">=</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;null&quot;</span> <span class="p">);</span>
-<span class="linenos" data-linenos=" 5 "></span>            <span class="kd">var</span> <span class="nx">list11</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 6 "></span>                <span class="kd">var</span> <span class="nx">ref647</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 7 "></span>                <span class="kd">var</span> <span class="nx">idLyr</span> <span class="o">=</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Lyr &quot;</span> <span class="p">);</span>
-<span class="linenos" data-linenos=" 8 "></span>                <span class="kd">var</span> <span class="nx">idOrdn</span> <span class="o">=</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Ordn&quot;</span> <span class="p">);</span>
-<span class="linenos" data-linenos=" 9 "></span>                <span class="kd">var</span> <span class="nx">idTrgt</span> <span class="o">=</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Trgt&quot;</span> <span class="p">);</span>
-<span class="linenos" data-linenos="10 "></span>                <span class="nx">ref647</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">idLyr</span><span class="p">,</span> <span class="nx">idOrdn</span><span class="p">,</span> <span class="nx">idTrgt</span> <span class="p">);</span>
-<span class="linenos" data-linenos="11 "></span>            <span class="nx">list11</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span> <span class="nx">ref647</span> <span class="p">);</span>
-<span class="linenos" data-linenos="12 "></span>        <span class="nx">desc808</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span> <span class="nx">idnull</span><span class="p">,</span> <span class="nx">list11</span> <span class="p">);</span>
-<span class="linenos" data-linenos="13 "></span>    <span class="nx">executeAction</span><span class="p">(</span> <span class="nx">idShw</span><span class="p">,</span> <span class="nx">desc808</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span> <span class="p">);</span>
-<span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+<details><summary>makeVisible();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// function makeVisible() {</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">//     var idShw = charIDToTypeID(&quot;Shw &quot;);</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1">//     var desc808 = new ActionDescriptor();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1">//     var idnull = charIDToTypeID(&quot;null&quot;);</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="c1">//     var list11 = new ActionList();</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1">//     var ref647 = new ActionReference();</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1">//     var idLyr = charIDToTypeID(&quot;Lyr &quot;);</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="c1">//     var idOrdn = charIDToTypeID(&quot;Ordn&quot;);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="c1">//     var idTrgt = charIDToTypeID(&quot;Trgt&quot;);</span>
+<span class="linenos" data-linenos="10 "></span><span class="c1">//     ref647.putEnumerated(idLyr, idOrdn, idTrgt);</span>
+<span class="linenos" data-linenos="11 "></span><span class="c1">//     list11.putReference(ref647);</span>
+<span class="linenos" data-linenos="12 "></span><span class="c1">//     desc808.putList(idnull, list11);</span>
+<span class="linenos" data-linenos="13 "></span><span class="c1">//     executeAction(idShw, desc808, DialogModes.NO);</span>
+<span class="linenos" data-linenos="14 "></span><span class="c1">// }</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span><span class="kd">function</span> <span class="nx">makeVisible</span><span class="p">(</span><span class="nx">_input</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="23 "></span>            <span class="c1">// show by Index</span>
+<span class="linenos" data-linenos="24 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="26 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="27 "></span>                <span class="c1">// show by Layername</span>
+<span class="linenos" data-linenos="28 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="29 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="30 "></span>                <span class="c1">// show by Layername via Regex // first hit</span>
+<span class="linenos" data-linenos="31 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_input</span><span class="p">)[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="linenos" data-linenos="32 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="33 "></span>            <span class="c1">// } else if (typeof _input == &quot;boolean&quot; || typeof _input == &#39;undefined&#39;) {</span>
+<span class="linenos" data-linenos="34 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s2">&quot;undefined&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="35 "></span>            <span class="c1">// show activeLayer</span>
+<span class="linenos" data-linenos="36 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="37 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="38 "></span>        <span class="nx">l</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="39 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">c2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">l</span><span class="p">);</span>
+<span class="linenos" data-linenos="40 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;show&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">)</span>
+<span class="linenos" data-linenos="41 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="42 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/utils/makeVisible.js"></a></p>
@@ -1999,16 +2051,42 @@
 <span class="linenos" data-linenos="13 "></span><span class="c1">//     executeAction(idHd, desc809, DialogModes.NO);</span>
 <span class="linenos" data-linenos="14 "></span><span class="c1">// }</span>
 <span class="linenos" data-linenos="15 "></span>
-<span class="linenos" data-linenos="16 "></span><span class="c1">// hide();</span>
-<span class="linenos" data-linenos="17 "></span><span class="kd">function</span> <span class="nx">hide</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="18 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
-<span class="linenos" data-linenos="19 "></span>    <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
-<span class="linenos" data-linenos="20 "></span>    <span class="kd">var</span> <span class="nx">rl</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos="21 "></span>    <span class="nx">rl</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
-<span class="linenos" data-linenos="22 "></span>    <span class="nx">l</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">rl</span><span class="p">);</span>
-<span class="linenos" data-linenos="23 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">c2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">l</span><span class="p">);</span>
-<span class="linenos" data-linenos="24 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;hide&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
-<span class="linenos" data-linenos="25 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="16 "></span><span class="c1">// function hide() {</span>
+<span class="linenos" data-linenos="17 "></span><span class="c1">//     var d = new ActionDescriptor();</span>
+<span class="linenos" data-linenos="18 "></span><span class="c1">//     var l = new ActionList();</span>
+<span class="linenos" data-linenos="19 "></span><span class="c1">//     var rl = new ActionReference();</span>
+<span class="linenos" data-linenos="20 "></span><span class="c1">//     rl.putEnumerated(s2t(&quot;layer&quot;), s2t(&quot;ordinal&quot;), s2t(&quot;targetEnum&quot;));</span>
+<span class="linenos" data-linenos="21 "></span><span class="c1">//     l.putReference(rl);</span>
+<span class="linenos" data-linenos="22 "></span><span class="c1">//     d.putList(c2t(&quot;null&quot;), l);</span>
+<span class="linenos" data-linenos="23 "></span><span class="c1">//     executeAction(s2t(&quot;hide&quot;), d, DialogModes.NO);</span>
+<span class="linenos" data-linenos="24 "></span><span class="c1">// }</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span><span class="kd">function</span> <span class="nx">hide</span><span class="p">(</span><span class="nx">_input</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="27 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="28 "></span>        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="29 "></span>        <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos="30 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="31 "></span>        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="32 "></span>            <span class="c1">// hide by Index</span>
+<span class="linenos" data-linenos="33 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="34 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="35 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="36 "></span>                <span class="c1">// hide by Layername</span>
+<span class="linenos" data-linenos="37 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="38 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="39 "></span>                <span class="c1">// hide by Layername via Regex // first hit</span>
+<span class="linenos" data-linenos="40 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_input</span><span class="p">)[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="linenos" data-linenos="41 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="42 "></span>            <span class="c1">// } else if (typeof _input == &quot;boolean&quot; || typeof _input == &#39;undefined&#39;) {</span>
+<span class="linenos" data-linenos="43 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s2">&quot;undefined&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="44 "></span>            <span class="c1">// hide activeLayer</span>
+<span class="linenos" data-linenos="45 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="46 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="47 "></span>        <span class="nx">l</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="48 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">c2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">l</span><span class="p">);</span>
+<span class="linenos" data-linenos="49 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;hide&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">)</span>
+<span class="linenos" data-linenos="50 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="51 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/utils/hide.js"></a></p>
@@ -3134,34 +3212,39 @@
 <h3 id="toogleopencloseset">toogleOpenCloseSet<a class="headerlink" href="#toogleopencloseset" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="toogleOpenCloseSet();"></button></p>
 <details><summary>toogleOpenCloseSet();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">toogleOpenCloseSet</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="nx">myALayerIDX</span> <span class="o">=</span> <span class="nx">getActiveLayerIndex</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="nx">myGroupP</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isLayerSet</span><span class="p">(</span><span class="nx">myALayerIDX</span><span class="p">))</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 5 "></span>      <span class="nx">myGroupP</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">parent</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>      <span class="k">try</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 7 "></span>        <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span> <span class="o">=</span> <span class="nx">myGroupP</span>
-<span class="linenos" data-linenos=" 8 "></span>      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="k">return</span>
-<span class="linenos" data-linenos="10 "></span>      <span class="p">};</span>
-<span class="linenos" data-linenos="11 "></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">getNbOfChilds</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="12 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">myGroupP</span><span class="p">.</span><span class="nx">typename</span> <span class="o">!=</span> <span class="s2">&quot;Document&quot;</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="13 "></span>          <span class="k">if</span> <span class="p">(</span><span class="nx">isSetOpened1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">))</span> <span class="p">{</span>
-<span class="linenos" data-linenos="14 "></span>            <span class="nx">closeGroup</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
-<span class="linenos" data-linenos="15 "></span>          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="linenos" data-linenos="16 "></span>            <span class="nx">openGroup1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
-<span class="linenos" data-linenos="17 "></span>          <span class="p">};</span>
-<span class="linenos" data-linenos="18 "></span>        <span class="p">}</span>
-<span class="linenos" data-linenos="19 "></span>      <span class="p">}</span>
-<span class="linenos" data-linenos="20 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="linenos" data-linenos="21 "></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">getNbOfChilds</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="22 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">isSetOpened1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">))</span> <span class="p">{</span>
-<span class="linenos" data-linenos="23 "></span>          <span class="nx">closeGroup</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="linenos" data-linenos="25 "></span>          <span class="nx">openGroup1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
-<span class="linenos" data-linenos="26 "></span>        <span class="p">};</span>
-<span class="linenos" data-linenos="27 "></span>      <span class="p">}</span>
-<span class="linenos" data-linenos="28 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="29 "></span>  <span class="p">}</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s2">&quot;toogleOpenCloseSet&quot;</span><span class="p">,</span> <span class="s2">&quot;toogleOpenCloseSet_inner()&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="kd">function</span> <span class="nx">toogleOpenCloseSet_inner</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">myALayerIDX</span> <span class="o">=</span> <span class="nx">getActiveLayerIndex</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">myGroupP</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isLayerSet</span><span class="p">(</span><span class="nx">myALayerIDX</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nx">myGroupP</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">parent</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span> <span class="o">=</span> <span class="nx">myGroupP</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span>            <span class="k">return</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="p">};</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">getNbOfChilds</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">myGroupP</span><span class="p">.</span><span class="nx">typename</span> <span class="o">!=</span> <span class="s2">&quot;Document&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span>                <span class="k">if</span> <span class="p">(</span><span class="nx">isSetOpened1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="19 "></span>                    <span class="nx">closeGroup</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
+<span class="linenos" data-linenos="20 "></span>                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span>                    <span class="nx">openGroup1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
+<span class="linenos" data-linenos="22 "></span>                <span class="p">};</span>
+<span class="linenos" data-linenos="23 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="26 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">getNbOfChilds</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="27 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">isSetOpened1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="28 "></span>                <span class="nx">closeGroup</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
+<span class="linenos" data-linenos="29 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="30 "></span>                <span class="nx">openGroup1</span><span class="p">(</span><span class="nx">myGroupP</span><span class="p">)</span>
+<span class="linenos" data-linenos="31 "></span>            <span class="p">};</span>
+<span class="linenos" data-linenos="32 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="33 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="34 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/utils/toogleOpenCloseSet.js"></a></p>
@@ -3572,12 +3655,32 @@
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/utils/myselectNextFor.js"></a></p>
 <h3 id="getvisible">getVisible<a class="headerlink" href="#getvisible" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="getVisible();"></button></p>
-<details><summary>getVisible();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">getVisible</span><span class="p">(){</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos="3 "></span>     <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s1">&#39;Lyr &#39;</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s1">&#39;Ordn&#39;</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s1">&#39;Trgt&#39;</span><span class="p">)</span> <span class="p">);</span>
-<span class="linenos" data-linenos="4 "></span>     <span class="kd">var</span> <span class="nx">vis</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref</span><span class="p">).</span><span class="nx">getInteger</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">));</span>
-<span class="linenos" data-linenos="5 "></span>     <span class="k">return</span> <span class="nx">vis</span><span class="p">;</span>
-<span class="linenos" data-linenos="6 "></span>  <span class="p">}</span>
+<details><summary>getVisible();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// function getVisible() {</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">//     var ref = new ActionReference();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1">//     ref.putEnumerated(charIDToTypeID(&#39;Lyr &#39;), charIDToTypeID(&#39;Ordn&#39;), charIDToTypeID(&#39;Trgt&#39;));</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1">//     var vis = executeActionGet(ref).getInteger(stringIDToTypeID(&#39;visible&#39;));</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="c1">//     return vis;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1">// }</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="c1">// get Visibility by IDX, name or activeLayer</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="kd">function</span> <span class="nx">getVisible</span><span class="p">(</span><span class="nx">_input</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_input</span><span class="p">)[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="linenos" data-linenos="19 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="kd">var</span> <span class="nx">vis</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">r</span><span class="p">).</span><span class="nx">getInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos="24 "></span>        <span class="k">return</span> <span class="nx">vis</span><span class="p">;</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="26 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/utils/getVisible.js"></a></p>
@@ -3594,25 +3697,68 @@
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/utils/getVisibleforIDX.js"></a></p>
 <h3 id="tooglevisibility">toogleVisibility<a class="headerlink" href="#tooglevisibility" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="toogleVisibility();"></button></p>
-<details><summary>toogleVisibility();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">toogleVisibility</span><span class="p">(){</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="k">if</span><span class="p">(</span><span class="nx">getVisible</span><span class="p">()){</span>
-<span class="linenos" data-linenos=" 3 "></span>          <span class="kd">var</span> <span class="nx">desc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 4 "></span>              <span class="kd">var</span> <span class="nx">list2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 5 "></span>                  <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 6 "></span>                  <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Lyr &quot;</span> <span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Ordn&quot;</span> <span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Trgt&quot;</span> <span class="p">)</span> <span class="p">);</span>
-<span class="linenos" data-linenos=" 7 "></span>              <span class="nx">list2</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span> <span class="nx">ref</span> <span class="p">);</span>
-<span class="linenos" data-linenos=" 8 "></span>          <span class="nx">desc</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;null&quot;</span> <span class="p">),</span> <span class="nx">list2</span> <span class="p">);</span>
-<span class="linenos" data-linenos=" 9 "></span>      <span class="nx">executeAction</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Hd  &quot;</span> <span class="p">),</span> <span class="nx">desc</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span> <span class="p">);</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-<span class="linenos" data-linenos="11 "></span>        <span class="kd">var</span> <span class="nx">desc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
-<span class="linenos" data-linenos="12 "></span>            <span class="kd">var</span> <span class="nx">list2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
-<span class="linenos" data-linenos="13 "></span>                <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos="14 "></span>                <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Lyr &quot;</span> <span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Ordn&quot;</span> <span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Trgt&quot;</span> <span class="p">)</span> <span class="p">);</span>
-<span class="linenos" data-linenos="15 "></span>            <span class="nx">list2</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span> <span class="nx">ref</span> <span class="p">);</span>
-<span class="linenos" data-linenos="16 "></span>        <span class="nx">desc</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;null&quot;</span> <span class="p">),</span> <span class="nx">list2</span> <span class="p">);</span>
-<span class="linenos" data-linenos="17 "></span>    <span class="nx">executeAction</span><span class="p">(</span> <span class="nx">charIDToTypeID</span><span class="p">(</span> <span class="s2">&quot;Shw &quot;</span> <span class="p">),</span> <span class="nx">desc</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span> <span class="p">);</span>
-<span class="linenos" data-linenos="18 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="19 "></span>  <span class="p">}</span>
+<details><summary>toogleVisibility();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// function toogleVisibility(){</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">//     if(getVisible()){</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1">//           var desc = new ActionDescriptor();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1">//               var list2 = new ActionList();</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="c1">//                   var ref = new ActionReference();</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1">//                   ref.putEnumerated( charIDToTypeID( &quot;Lyr &quot; ), charIDToTypeID( &quot;Ordn&quot; ), charIDToTypeID( &quot;Trgt&quot; ) );</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1">//               list2.putReference( ref );</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="c1">//           desc.putList( charIDToTypeID( &quot;null&quot; ), list2 );</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="c1">//       executeAction( charIDToTypeID( &quot;Hd  &quot; ), desc, DialogModes.NO );</span>
+<span class="linenos" data-linenos="10 "></span><span class="c1">//     }else{</span>
+<span class="linenos" data-linenos="11 "></span><span class="c1">//         var desc = new ActionDescriptor();</span>
+<span class="linenos" data-linenos="12 "></span><span class="c1">//             var list2 = new ActionList();</span>
+<span class="linenos" data-linenos="13 "></span><span class="c1">//                 var ref = new ActionReference();</span>
+<span class="linenos" data-linenos="14 "></span><span class="c1">//                 ref.putEnumerated( charIDToTypeID( &quot;Lyr &quot; ), charIDToTypeID( &quot;Ordn&quot; ), charIDToTypeID( &quot;Trgt&quot; ) );</span>
+<span class="linenos" data-linenos="15 "></span><span class="c1">//             list2.putReference( ref );</span>
+<span class="linenos" data-linenos="16 "></span><span class="c1">//         desc.putList( charIDToTypeID( &quot;null&quot; ), list2 );</span>
+<span class="linenos" data-linenos="17 "></span><span class="c1">//     executeAction( charIDToTypeID( &quot;Shw &quot; ), desc, DialogModes.NO );</span>
+<span class="linenos" data-linenos="18 "></span><span class="c1">//     }</span>
+<span class="linenos" data-linenos="19 "></span><span class="c1">//   }</span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span><span class="c1">// toogle by IDX, name or activeLayer</span>
+<span class="linenos" data-linenos="22 "></span><span class="kd">function</span> <span class="nx">toogleVisibility</span><span class="p">(</span><span class="nx">_input</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="24 "></span>        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos="26 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="27 "></span>
+<span class="linenos" data-linenos="28 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">getVisible</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="29 "></span>            <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="30 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="31 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="32 "></span>                <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="33 "></span>                    <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="34 "></span>                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="35 "></span>                    <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_input</span><span class="p">)[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="linenos" data-linenos="36 "></span>                <span class="p">}</span>
+<span class="linenos" data-linenos="37 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="38 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="39 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="40 "></span>            <span class="nx">l</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="41 "></span>            <span class="nx">d</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">c2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">l</span><span class="p">);</span>
+<span class="linenos" data-linenos="42 "></span>            <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;hide&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="43 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="44 "></span>            <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="45 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="46 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">==</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="47 "></span>                <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="48 "></span>                    <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="49 "></span>                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="50 "></span>                    <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_input</span><span class="p">)[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="linenos" data-linenos="51 "></span>                <span class="p">}</span>
+<span class="linenos" data-linenos="52 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="53 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="54 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="55 "></span>            <span class="nx">l</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="56 "></span>            <span class="nx">d</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">c2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">l</span><span class="p">);</span>
+<span class="linenos" data-linenos="57 "></span>            <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;show&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="58 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="59 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="60 "></span>        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Error by toogleVisibility: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">)</span>
+<span class="linenos" data-linenos="61 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="62 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/utils/toogleVisibility.js"></a></p>

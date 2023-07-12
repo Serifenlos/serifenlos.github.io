@@ -311,6 +311,18 @@
   
   
     <li class="md-nav__item">
+      <a href="channel.html" class="md-nav__link">
+        channel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="dialog.html" class="md-nav__link">
         dialog
       </a>
@@ -409,6 +421,18 @@
     <li class="md-nav__item">
       <a href="save.html" class="md-nav__link">
         save
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="selection.html" class="md-nav__link">
+        selection
       </a>
     </li>
   
@@ -650,6 +674,27 @@
           <li class="md-nav__item">
   <a href="#scrollpage" class="md-nav__link">
     scrollPage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anordung_zoom" class="md-nav__link">
+    anordung_zoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_panelsvisible" class="md-nav__link">
+    app_panelsVisible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rulersvisibility" class="md-nav__link">
+    rulersVisibility
   </a>
   
 </li>
@@ -951,6 +996,27 @@
           <li class="md-nav__item">
   <a href="#scrollpage" class="md-nav__link">
     scrollPage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anordung_zoom" class="md-nav__link">
+    anordung_zoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_panelsvisible" class="md-nav__link">
+    app_panelsVisible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rulersvisibility" class="md-nav__link">
+    rulersVisibility
   </a>
   
 </li>
@@ -1402,12 +1468,84 @@ thanks <a href="http://www.ps-scripts.com/viewtopic.php?f=77&amp;t=40407&amp;sid
 </ul>
 </details>
 </details>
-<div class="admonition warning show">
+<h3 id="anordung_zoom">anordung_zoom<a class="headerlink" href="#anordung_zoom" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="anordnung_zoom(_zoomSteps);"></button></p>
+<details><summary>anordnung_zoom(_zoomSteps);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">anordnung_zoom</span><span class="p">(</span><span class="nx">_zoomSteps</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">documents</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">theFirst</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="kd">var</span> <span class="nx">theDocs</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">documents</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">m</span> <span class="o">&lt;</span> <span class="nx">theDocs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">m</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>            <span class="kd">var</span> <span class="nx">theDoc</span> <span class="o">=</span> <span class="nx">theDocs</span><span class="p">[</span><span class="nx">m</span><span class="p">];</span>
+<span class="linenos" data-linenos=" 8 "></span>            <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span> <span class="o">=</span> <span class="nx">theDoc</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>            <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>                <span class="nx">fitScreen</span><span class="p">();</span>
+<span class="linenos" data-linenos="12 "></span>                <span class="k">if</span> <span class="p">(</span><span class="nx">_zoomSteps</span> <span class="o">!=</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span>                    <span class="nx">zoomSteps</span><span class="p">(</span><span class="nx">_zoomSteps</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>                <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span>                <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="p">};</span>
+<span class="linenos" data-linenos="18 "></span>        <span class="p">};</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span> <span class="o">=</span> <span class="nx">theFirst</span><span class="p">;</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="p">};</span>
+<span class="linenos" data-linenos="21 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/view/anordung_zoom.js"></a></p>
+<h3 id="app_panelsvisible">app_panelsVisible<a class="headerlink" href="#app_panelsvisible" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="app_panelsVisible();"></button></p>
+<details><summary>app_panelsVisible();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// https://community.adobe.com/t5/photoshop-ecosystem-discussions/alert-togglepalettes/m-p/10683352#M271446</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kd">function</span> <span class="nx">app_panelsVisible</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putProperty</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;property&quot;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;panelList&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;application&quot;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">r</span><span class="p">).</span><span class="nx">getList</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;panelList&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>        <span class="kd">var</span> <span class="nx">viz</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span>            <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">getObjectValue</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span>            <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">getString</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span>            <span class="c1">// skip some panels if shift+tab was pressed</span>
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">id</span> <span class="o">==</span> <span class="s2">&quot;panelid.static.toolbar&quot;</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span> <span class="c1">// skip tool panel</span>
+<span class="linenos" data-linenos="20 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">id</span> <span class="o">==</span> <span class="s2">&quot;panelid.static.options&quot;</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span> <span class="c1">// skip options panel</span>
+<span class="linenos" data-linenos="21 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">id</span> <span class="o">==</span> <span class="s2">&quot;panelid.static.blrb&quot;</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span> <span class="c1">// what is panelid.static.blrb ??</span>
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">getBoolean</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;visible&quot;</span><span class="p">)))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="25 "></span>                <span class="nx">viz</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="linenos" data-linenos="26 "></span>                <span class="k">break</span><span class="p">;</span>
+<span class="linenos" data-linenos="27 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="28 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>        <span class="k">return</span> <span class="nx">viz</span><span class="p">;</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="32 "></span>        <span class="k">throw</span> <span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="linenos" data-linenos="33 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="34 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/view/app_panelsVisible.js"></a></p>
+<h3 id="rulersvisibility">rulersVisibility<a class="headerlink" href="#rulersvisibility" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="rulersVisibility();"></button></p>
+<details><summary>rulersVisibility();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">rulersVisibility</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putProperty</span><span class="p">(</span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;Prpr&quot;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;rulersVisibility&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;Dcmn&quot;</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;Ordn&quot;</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="s2">&quot;Trgt&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="k">return</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">r</span><span class="p">).</span><span class="nx">getBoolean</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;rulersVisibility&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/view/rulersVisibility.js"></a></p>
+<div class="admonition warning hide">
 <p class="admonition-title">not documented functions</p>
-<ul>
-<li>anordung_zoom</li>
-<li>rulersVisibility</li>
-</ul>
 </div>
                 
               
@@ -1428,7 +1566,7 @@ thanks <a href="http://www.ps-scripts.com/viewtopic.php?f=77&amp;t=40407&amp;sid
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="save.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: save" rel="prev">
+        <a href="selection.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: selection" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1437,7 +1575,7 @@ thanks <a href="http://www.ps-scripts.com/viewtopic.php?f=77&amp;t=40407&amp;sid
               <span class="md-footer__direction">
                 Zurück
               </span>
-              save
+              selection
             </div>
           </div>
         </a>

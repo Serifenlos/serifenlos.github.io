@@ -410,6 +410,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#selectlayerbyid" class="md-nav__link">
+    selectLayerByID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#getmaskvisibility" class="md-nav__link">
     getMaskVisibility
   </a>
@@ -466,8 +473,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#layer_selectedid_get" class="md-nav__link">
+    layer_selectedID_get
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#layer_selectedidx_set" class="md-nav__link">
     layer_selectedIDX_set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_selectedid_set" class="md-nav__link">
+    layer_selectedID_set
   </a>
   
 </li>
@@ -580,6 +601,13 @@
         <li class="md-nav__item">
   <a href="#select_nextlayer_simple" class="md-nav__link">
     select_nextLayer_simple
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_create" class="md-nav__link">
+    layer_create
   </a>
   
 </li>
@@ -828,6 +856,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#selectlayerbyid" class="md-nav__link">
+    selectLayerByID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#getmaskvisibility" class="md-nav__link">
     getMaskVisibility
   </a>
@@ -884,8 +919,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#layer_selectedid_get" class="md-nav__link">
+    layer_selectedID_get
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#layer_selectedidx_set" class="md-nav__link">
     layer_selectedIDX_set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_selectedid_set" class="md-nav__link">
+    layer_selectedID_set
   </a>
   
 </li>
@@ -998,6 +1047,13 @@
         <li class="md-nav__item">
   <a href="#select_nextlayer_simple" class="md-nav__link">
     select_nextLayer_simple
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer_create" class="md-nav__link">
+    layer_create
   </a>
   
 </li>
@@ -1169,7 +1225,7 @@
 </details>
 </details>
 <h3 id="selectlayerbyselector">selectLayerBySelector<a class="headerlink" href="#selectlayerbyselector" title="Permanent link">&para;</a></h3>
-<p>select Layer by Name or ID</p>
+<p>select Layer by Name or IDX</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="selectLayerBySelector(_selector, _add);"></button></p>
 <details><summary>selectLayerBySelector(_selector, _add);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">selectLayerBySelector</span><span class="p">(</span><span class="nx">_selector</span><span class="p">,</span> <span class="nx">_add</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
@@ -1188,6 +1244,47 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/selectLayerBySelector.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">selectLayerBySelector</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">,</span> <span class="s2">&quot;remove&quot;</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_selector <code class="highlight"><span class="err">LayerName</span></code> <code class="highlight"><span class="err">IDX</span></code></li>
+<li>_add <code class="highlight"><span class="err">add</span></code> <code class="highlight"><span class="err">remove</span></code></li>
+</ul>
+</details>
+</details>
+<h3 id="selectlayerbyid">selectLayerByID<a class="headerlink" href="#selectlayerbyid" title="Permanent link">&para;</a></h3>
+<p>select Layer by ID</p>
+<p class="btn_p"><button class="btn" data-clipboard-text="selectLayerByID(_id, _add);"></button></p>
+<details><summary>selectLayerByID(_id, _add);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">selectLayerByID</span><span class="p">(</span><span class="nx">_id</span><span class="p">,</span> <span class="nx">_add</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_add</span> <span class="o">==</span> <span class="s2">&quot;remove&quot;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">_add</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>            <span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;removeFromSelection&quot;</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="kd">var</span> <span class="nx">addX</span> <span class="o">=</span> <span class="s2">&quot;addToSelection&quot;</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nx">r</span><span class="p">.</span><span class="nx">putIdentifier</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_id</span><span class="p">)</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;selectionModifier&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;selectionModifierType&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="nx">addX</span><span class="p">));</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;makeVisible&quot;</span><span class="p">),</span> <span class="kc">false</span><span class="p">);</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="c1">// alert(&quot;error selectLayerByID: &quot; + e)</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/selectLayerByID.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">selectLayerByID</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="s2">&quot;add&quot;</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_id <code class="highlight"><span class="err">number</span></code></li>
+<li>_add <code class="highlight"><span class="err">add</span></code> <code class="highlight"><span class="err">remove</span></code></li>
+</ul>
+</details>
+</details>
 <h3 id="getmaskvisibility">getMaskVisibility<a class="headerlink" href="#getmaskvisibility" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="getMaskVisibility();"></button></p>
 <details><summary>getMaskVisibility();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">getMaskVisibility</span><span class="p">()</span> <span class="p">{</span>
@@ -1338,6 +1435,8 @@
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_solidColorHSB_change.js"></a></p>
 <h3 id="layer_selectedidx_get">layer_selectedIDX_get<a class="headerlink" href="#layer_selectedidx_get" title="Permanent link">&para;</a></h3>
+<p><strong><em>array</em></strong>
+get array of selected Layers by IDX</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="layer_selectedIDX_get();"></button></p>
 <details><summary>layer_selectedIDX_get();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_selectedIDX_get</span><span class="p">()</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">selectedLayers</span> <span class="o">=</span> <span class="p">[];</span>
@@ -1355,7 +1454,32 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_selectedIDX_get.js"></a></p>
+<h3 id="layer_selectedid_get">layer_selectedID_get<a class="headerlink" href="#layer_selectedid_get" title="Permanent link">&para;</a></h3>
+<p><strong><em>array</em></strong>
+get Array of selected Layers by ID</p>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_selectedID_get();"></button></p>
+<details><summary>layer_selectedID_get();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_selectedID_get</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">selectedLayers</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;ordinal&#39;</span><span class="p">),</span> <span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;targetEnum&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="kd">var</span> <span class="nx">desc</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">desc</span><span class="p">.</span><span class="nx">hasKey</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;targetLayers&#39;</span><span class="p">)))</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nx">desc</span> <span class="o">=</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getList</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s1">&#39;targetLayers&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">c</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="nx">ref2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="10 "></span>            <span class="nx">hasBackground</span><span class="p">()</span> <span class="o">?</span> <span class="nx">ref2</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getReference</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">getIndex</span><span class="p">())</span> <span class="o">:</span> <span class="nx">ref2</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getReference</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">getIndex</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="nx">desc2</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref2</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="nx">selectedLayers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">desc2</span><span class="p">.</span><span class="nx">getInteger</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="s2">&quot;layerID&quot;</span><span class="p">)));</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="k">return</span> <span class="nx">selectedLayers</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span><span class="p">};</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_selectedID_get.js"></a></p>
 <h3 id="layer_selectedidx_set">layer_selectedIDX_set<a class="headerlink" href="#layer_selectedidx_set" title="Permanent link">&para;</a></h3>
+<p><strong><em>action</em></strong>
+select Layers by Array of IDX</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="layer_selectedIDX_set(_array);"></button></p>
 <details><summary>layer_selectedIDX_set(_array);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_selectedIDX_set</span><span class="p">(</span><span class="nx">_array</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="k">try</span> <span class="p">{</span>
@@ -1372,6 +1496,35 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_selectedIDX_set.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">layer_selectedIDX_set</span><span class="p">(</span><span class="nx">startLayer</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<h3 id="layer_selectedid_set">layer_selectedID_set<a class="headerlink" href="#layer_selectedid_set" title="Permanent link">&para;</a></h3>
+<p><strong><em>action</em></strong>
+select Layers by Array of ID</p>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_selectedID_set(_array);"></button></p>
+<details><summary>layer_selectedID_set(_array);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_selectedID_set</span><span class="p">(</span><span class="nx">_array</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nx">selectLayers</span><span class="p">(</span><span class="s2">&quot;selectNoLayers&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">try</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">_array</span> <span class="o">=</span> <span class="nx">arrayCorrect</span><span class="p">(</span><span class="nx">_array</span><span class="p">)}</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_array</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">_array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>                <span class="nx">selectLayerByID</span><span class="p">(</span><span class="nx">_array</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">t</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;error layer_selectedID_set: &quot;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">)</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="16 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_selectedID_set.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">layer_selectedID_set</span><span class="p">(</span><span class="nx">getMeta_2</span><span class="p">(</span><span class="s2">&quot;startID&quot;</span><span class="p">));</span>
+</code></pre></div>
+</details>
 <h3 id="layer_getsolidfillcolor">layer_getSolidFillColor<a class="headerlink" href="#layer_getsolidfillcolor" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="layer_getSolidFillColor();"></button></p>
 <details><summary>layer_getSolidFillColor();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_getSolidFillColor</span><span class="p">()</span> <span class="p">{</span>
@@ -1743,18 +1896,79 @@
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_copyLayers.js"></a></p>
 <h3 id="layer_delete">layer_delete<a class="headerlink" href="#layer_delete" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="layer_delete();"></button></p>
-<details><summary>layer_delete();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// TODO hier könnte man noch einen Selektor einbauen à la name, layerID oder idx</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="kd">function</span> <span class="nx">layer_delete</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="c1">// var l = new ActionList();</span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="c1">// l.putInteger(20);</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="c1">// d.putList(s2t(&quot;layerID&quot;), l);</span>
-<span class="linenos" data-linenos="11 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;delete&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
-<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+<details><summary>layer_delete();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// function layer_delete(_input) {</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">//     var d = new ActionDescriptor();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1">//     // var l = new ActionList();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1">//     var r = new ActionReference();</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1">//     try {</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1">//         if (typeof _input == &quot;number&quot;) {</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="c1">//             r.putIndex(s2t(&quot;layer&quot;), _input);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="c1">//         } else {</span>
+<span class="linenos" data-linenos="10 "></span><span class="c1">//             if (typeof _input == &quot;string&quot;) {</span>
+<span class="linenos" data-linenos="11 "></span><span class="c1">//                 if (layer_checkExistence(_input)) {</span>
+<span class="linenos" data-linenos="12 "></span><span class="c1">//                     r.putName(s2t(&#39;layer&#39;), _input);</span>
+<span class="linenos" data-linenos="13 "></span><span class="c1">//                 } else {</span>
+<span class="linenos" data-linenos="14 "></span><span class="c1">//                     r.putIndex(s2t(&quot;layer&quot;), layer_getIDXbyString(_input)[0]);</span>
+<span class="linenos" data-linenos="15 "></span><span class="c1">//                 }</span>
+<span class="linenos" data-linenos="16 "></span><span class="c1">//             } else {</span>
+<span class="linenos" data-linenos="17 "></span><span class="c1">//                 if (typeof _input === &quot;undefined&quot;) {</span>
+<span class="linenos" data-linenos="18 "></span><span class="c1">//                     r.putEnumerated(s2t(&quot;layer&quot;), s2t(&quot;ordinal&quot;), s2t(&quot;targetEnum&quot;));</span>
+<span class="linenos" data-linenos="19 "></span><span class="c1">//                 }</span>
+<span class="linenos" data-linenos="20 "></span><span class="c1">//             }</span>
+<span class="linenos" data-linenos="21 "></span><span class="c1">//         }</span>
+<span class="linenos" data-linenos="22 "></span><span class="c1">//     } catch (e) {</span>
+<span class="linenos" data-linenos="23 "></span><span class="c1">//         alert(&quot;nix zu löschen&quot;)</span>
+<span class="linenos" data-linenos="24 "></span><span class="c1">//     }</span>
+<span class="linenos" data-linenos="25 "></span><span class="c1">// }</span>
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span>
+<span class="linenos" data-linenos="28 "></span><span class="c1">// if (typeof _input == &quot;number&quot;) {</span>
+<span class="linenos" data-linenos="29 "></span><span class="c1">//     // delete by Index</span>
+<span class="linenos" data-linenos="30 "></span><span class="c1">//     r.putIndex(s2t(&quot;layer&quot;), _input);</span>
+<span class="linenos" data-linenos="31 "></span><span class="c1">// } else if (typeof _input == &quot;string&quot;) {</span>
+<span class="linenos" data-linenos="32 "></span><span class="c1">//     if (layer_checkExistence(_input)) {</span>
+<span class="linenos" data-linenos="33 "></span><span class="c1">//         // delete by Layername</span>
+<span class="linenos" data-linenos="34 "></span><span class="c1">//         r.putName(s2t(&#39;layer&#39;), _input);</span>
+<span class="linenos" data-linenos="35 "></span><span class="c1">//     } else {</span>
+<span class="linenos" data-linenos="36 "></span><span class="c1">//         // delete by Layername via Regex // first hit</span>
+<span class="linenos" data-linenos="37 "></span><span class="c1">//         r.putIndex(s2t(&quot;layer&quot;), layer_getIDXbyString(_input)[0]);</span>
+<span class="linenos" data-linenos="38 "></span><span class="c1">//     }</span>
+<span class="linenos" data-linenos="39 "></span><span class="c1">// } else if (typeof _input === &quot;undefined&quot;) {</span>
+<span class="linenos" data-linenos="40 "></span><span class="c1">//     // delete activeLayer</span>
+<span class="linenos" data-linenos="41 "></span><span class="c1">//     r.putEnumerated(s2t(&quot;layer&quot;), s2t(&quot;ordinal&quot;), s2t(&quot;targetEnum&quot;));</span>
+<span class="linenos" data-linenos="42 "></span><span class="c1">// }</span>
+<span class="linenos" data-linenos="43 "></span>
+<span class="linenos" data-linenos="44 "></span><span class="c1">// d.putReference(s2t(&quot;null&quot;), r);</span>
+<span class="linenos" data-linenos="45 "></span><span class="c1">// executeAction(s2t(&quot;delete&quot;), d, DialogModes.NO);</span>
+<span class="linenos" data-linenos="46 "></span>
+<span class="linenos" data-linenos="47 "></span>
+<span class="linenos" data-linenos="48 "></span><span class="kd">function</span> <span class="nx">layer_delete</span><span class="p">(</span><span class="nx">_input</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="49 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="50 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="51 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="52 "></span>        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="53 "></span>            <span class="c1">// delete by Index</span>
+<span class="linenos" data-linenos="54 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="55 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="56 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="57 "></span>                <span class="c1">// delete by Layername</span>
+<span class="linenos" data-linenos="58 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="59 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="60 "></span>                <span class="c1">// delete by Layername via Regex // first hit</span>
+<span class="linenos" data-linenos="61 "></span>                <span class="kd">var</span> <span class="nx">idxArray</span> <span class="o">=</span> <span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="62 "></span>                <span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">idxArray</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="linenos" data-linenos="63 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="64 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">_input</span> <span class="o">===</span> <span class="s2">&quot;undefined&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="65 "></span>            <span class="c1">// delete activeLayer</span>
+<span class="linenos" data-linenos="66 "></span>            <span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="67 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="68 "></span>        <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="69 "></span>        <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;delete&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="70 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="71 "></span>        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;nix zu löschen&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="72 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="73 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_delete.js"></a></p>
@@ -1955,6 +2169,46 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/select_nextLayer_simple.js"></a></p>
+<h3 id="layer_create">layer_create<a class="headerlink" href="#layer_create" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="layer_create(_name, _opacity, _fillWhite, _blendMode);"></button></p>
+<details><summary>layer_create(_name, _opacity, _fillWhite, _blendMode);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">layer_create</span><span class="p">(</span><span class="nx">_name</span><span class="p">,</span> <span class="nx">_opacity</span><span class="p">,</span> <span class="nx">_fillWhite</span><span class="p">,</span> <span class="nx">_blendMode</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="c1">//create Layer with multiply blendMode for the option to fill it</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putClass</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putString</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">),</span> <span class="nx">_name</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putUnitDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;opacity&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;percentUnit&quot;</span><span class="p">),</span> <span class="nx">_opacity</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;blendMode&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;multiply&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;fillNeutral&quot;</span><span class="p">),</span> <span class="nx">_fillWhite</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;using&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;make&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span>    <span class="c1">//reset the blendMode</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="kd">var</span> <span class="nx">d3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="kd">var</span> <span class="nx">d4</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="kd">var</span> <span class="nx">r2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="nx">r2</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="nx">d3</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span> <span class="nx">r2</span><span class="p">);</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="nx">d4</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;blendMode&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="nx">_blendMode</span><span class="p">));</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="nx">d3</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span> <span class="nx">d4</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">),</span> <span class="nx">d3</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/layer/layer_create.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">layer_create</span><span class="p">(</span><span class="s2">&quot;LayerName&quot;</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">&quot;screen&quot;</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_name <code class="highlight"><span class="err">string</span></code></li>
+<li>_opacity <code class="highlight"><span class="err">number</span></code></li>
+<li>_fillWhite <code class="highlight"><span class="err">boolean</span></code></li>
+<li>_blendMode <code class="highlight"><span class="err">normal</span></code> <code class="highlight"><span class="err">…</span></code></li>
+</ul>
+</details>
+</details>
 <div class="admonition warning hide">
 <p class="admonition-title">not documented functions</p>
 </div>

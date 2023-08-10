@@ -388,6 +388,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#channel2image" class="md-nav__link">
+    channel2image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bildberechnung" class="md-nav__link">
+    bildberechnung
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -660,6 +674,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#channel2image" class="md-nav__link">
+    channel2image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bildberechnung" class="md-nav__link">
+    bildberechnung
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -772,24 +800,24 @@
 <span class="linenos" data-linenos=" 5 "></span>    <span class="c1">// var _calculation = &quot;screen&quot;;</span>
 <span class="linenos" data-linenos=" 6 "></span>
 <span class="linenos" data-linenos=" 7 "></span>    <span class="c1">// channel_select(&quot;RGB&quot;, false);</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos=" 9 "></span>
-<span class="linenos" data-linenos="10 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="11 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="13 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;rg&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;rb&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="17 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="18 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="19 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;gr&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;gb&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;gr&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;gb&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;gr&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;gb&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="22 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="23 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="24 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="25 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;br&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;grain&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">_source</span><span class="p">,</span> <span class="nx">calc_1</span><span class="p">,</span> <span class="s2">&quot;bg&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;br&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;bg&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;br&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="nx">channel_delete</span><span class="p">(</span><span class="s2">&quot;bg&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos="26 "></span>
 <span class="linenos" data-linenos="27 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;RG&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos="28 "></span>    <span class="nx">kanalberechnung</span><span class="p">(</span><span class="s2">&quot;RG&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">,</span> <span class="s2">&quot;saturation&quot;</span><span class="p">,</span> <span class="s2">&quot;RGB&quot;</span><span class="p">);</span>
@@ -860,8 +888,59 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/channel/kanalberechnung.js"></a></p>
-<div class="admonition warning hide">
+<h3 id="channel2image">channel2image<a class="headerlink" href="#channel2image" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="channel2image(_channel_name, _layer_name);"></button></p>
+<details><summary>channel2image(_channel_name, _layer_name);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">channel2image</span><span class="p">(</span><span class="nx">_channel_name</span><span class="p">,</span> <span class="nx">_layer_name</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="nx">layer_create</span><span class="p">(</span><span class="nx">_layer_name</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nx">_channel_name</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nx">bildberechnung</span><span class="p">(</span><span class="nx">_channel_name</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">f</span><span class="p">);</span>
+<span class="linenos" data-linenos="4 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/channel/channel2image.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">doc</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s2">&quot;channel2image&quot;</span><span class="p">,</span> <span class="s2">&quot;channel2image(&#39;Alpha 1&#39;, &#39;channel2image&#39;)&quot;</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_channel_name <code class="highlight"><span class="err">string</span></code></li>
+<li>_layer_name <code class="highlight"><span class="err">string</span></code></li>
+</ul>
+</details>
+</details>
+<h3 id="bildberechnung">bildberechnung<a class="headerlink" href="#bildberechnung" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="bildberechnung(_channel_name, _blendmode, _invert, _preserveTransparency);"></button></p>
+<details><summary>bildberechnung(_channel_name, _blendmode, _invert, _preserveTransparency);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">bildberechnung</span><span class="p">(</span><span class="nx">_channel_name</span><span class="p">,</span> <span class="nx">_blendmode</span><span class="p">,</span> <span class="nx">_invert</span><span class="p">,</span> <span class="nx">_preserveTransparency</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">d2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">),</span> <span class="nx">_channel_name</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span> <span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;invert&quot;</span><span class="p">),</span> <span class="nx">_invert</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;calculation&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;calculationType&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="nx">_blendmode</span><span class="p">));</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="nx">d2</span><span class="p">.</span><span class="nx">putBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;preserveTransparency&quot;</span><span class="p">),</span> <span class="nx">_preserveTransparency</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;with&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;calculation&quot;</span><span class="p">),</span> <span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">try</span> <span class="p">{</span><span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;applyImageEvent&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">)}</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/channel/bildberechnung.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">bildberechnung</span><span class="p">(</span><span class="s1">&#39;Alpha 1&#39;</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">f</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_channel_name <code class="highlight"><span class="err">string</span></code></li>
+<li>_blendmode <code class="highlight"><span class="err">string</span></code></li>
+<li>_invert <code class="highlight"><span class="err">boolean</span></code></li>
+<li>_preserveTransparency <code class="highlight"><span class="err">boolean</span></code></li>
+</ul>
+</details>
+</details>
+<div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
+<ul>
+<li>channel_setSaturation_singleColors</li>
+<li>mask_setSaturation_singleColors</li>
+<li>mask_setSaturation_singleColors_create</li>
+</ul>
 </div>
                 
               

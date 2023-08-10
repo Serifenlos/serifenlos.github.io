@@ -1065,22 +1065,7 @@
 <span class="linenos" data-linenos="26 "></span>            <span class="p">}</span>
 <span class="linenos" data-linenos="27 "></span>        <span class="p">}</span>
 <span class="linenos" data-linenos="28 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="29 "></span>
-<span class="linenos" data-linenos="30 "></span>    <span class="c1">// himmelmaske_loop();</span>
-<span class="linenos" data-linenos="31 "></span>
-<span class="linenos" data-linenos="32 "></span>    <span class="c1">// createGroup(&quot;Himmel&quot;, &quot;passThrough&quot;, &quot;none&quot;, 100, f);</span>
-<span class="linenos" data-linenos="33 "></span>    <span class="c1">// maskFromSelection();</span>
-<span class="linenos" data-linenos="34 "></span>
-<span class="linenos" data-linenos="35 "></span>
-<span class="linenos" data-linenos="36 "></span>    <span class="c1">// if (startIDXs.length &gt; 0) {</span>
-<span class="linenos" data-linenos="37 "></span>    <span class="c1">//     moveLayer(&quot;Himmel&quot;, startIDXs[startIDXs.length - 1], &quot;up&quot;);</span>
-<span class="linenos" data-linenos="38 "></span>    <span class="c1">// } else if (layer_checkExistence(layer_getIDXbyString(&quot;Dodge &amp; Burn △◊▽&quot;)[0])) {</span>
-<span class="linenos" data-linenos="39 "></span>    <span class="c1">//     moveLayer(&quot;Himmel&quot;, &quot;Dodge &amp; Burn △◊▽&quot;, &quot;up&quot;);</span>
-<span class="linenos" data-linenos="40 "></span>    <span class="c1">// } /*else if (layer_checkExistence(layer_getIDXbyString(&quot;Einstellungen&quot;)[0])) {</span>
-<span class="linenos" data-linenos="41 "></span>    <span class="c1">//     moveLayer(&quot;Motiv&quot;, &quot;Einstellungen&quot;, &quot;down&quot;);</span>
-<span class="linenos" data-linenos="42 "></span>    <span class="c1">// }*/</span>
-<span class="linenos" data-linenos="43 "></span>    <span class="c1">// gotoLayer(&quot;Himmel&quot;);</span>
-<span class="linenos" data-linenos="44 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="29 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/ready/himmelmaske.js"></a></p>
@@ -1215,82 +1200,74 @@
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/ready/freisteller_allHG.js"></a></p>
 <h3 id="tiefenmaske">tiefenmaske<a class="headerlink" href="#tiefenmaske" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="tiefenmaske(_merge);"></button></p>
-<details><summary>tiefenmaske(_merge);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">tiefenmaske</span><span class="p">(</span><span class="nx">_merge</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">startIDXs</span> <span class="o">=</span> <span class="nx">layer_selectedIDX_get</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 3 "></span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">_merge</span> <span class="o">||</span> <span class="nx">layer_selectedIDX_get</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 6 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_merge</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 7 "></span>            <span class="nx">layer_mergeVisible</span><span class="p">(</span><span class="nx">_merge</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 8 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 9 "></span>            <span class="nx">layer_copyLayers</span><span class="p">();</span> <span class="c1">//Ebenen kopieren (Apfel J)</span>
-<span class="linenos" data-linenos="10 "></span>            <span class="nx">layer_mergeLayers</span><span class="p">();</span> <span class="c1">//auf eine Ebene reduzieren (Apfel E)</span>
-<span class="linenos" data-linenos="11 "></span>        <span class="p">}</span>
+<details><summary>tiefenmaske(_merge);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">tiefenmaske</span><span class="p">(</span><span class="nx">_merge</span><span class="p">,</span> <span class="nx">_kind</span><span class="p">,</span> <span class="nx">_get</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="c1">// _merge = true || false</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="c1">// _kind = &#39;Tiefe&#39; || &#39;nicht Tiefe&#39;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="c1">// _get = &#39;Selection&#39; || &#39;Folder&#39;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="kd">var</span> <span class="nx">startIDXs</span> <span class="o">=</span> <span class="nx">layer_selectedIDX_get</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nx">cancel</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">_merge</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nx">layer_mergeVisible</span><span class="p">(</span><span class="nx">_merge</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 <span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>        <span class="nx">nameLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">kind</span> <span class="o">==</span> <span class="s2">&quot;LayerKind.SMARTOBJECT&quot;</span> <span class="o">||</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">kind</span> <span class="o">==</span> <span class="s2">&quot;LayerKind.NORMAL&quot;</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>        <span class="c1">// move to TOP</span>
-<span class="linenos" data-linenos="16 "></span>        <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">hasBackground</span><span class="p">()</span> <span class="o">?</span> <span class="mf">0</span> <span class="o">:</span> <span class="mf">1</span><span class="p">;</span>
-<span class="linenos" data-linenos="17 "></span>        <span class="k">while</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span>
-<span class="linenos" data-linenos="18 "></span>            <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<span class="linenos" data-linenos="19 "></span>        <span class="p">};</span>
-<span class="linenos" data-linenos="20 "></span>        <span class="nx">moveLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">,</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mf">1</span><span class="p">),</span> <span class="s2">&quot;up&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="21 "></span>        <span class="nx">gotoLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">]))</span> <span class="p">{</span>
-<span class="linenos" data-linenos="25 "></span>            <span class="c1">// alert(&quot;Ori existiert&quot;)</span>
-<span class="linenos" data-linenos="26 "></span>            <span class="nx">gotoLayer</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="27 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="linenos" data-linenos="28 "></span>            <span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">layer_selectedIDX_get</span><span class="p">()[</span><span class="nx">layer_selectedIDX_get</span><span class="p">().</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">])</span>
-<span class="linenos" data-linenos="29 "></span>        <span class="p">}</span>
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span>        <span class="k">while</span> <span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">kind</span> <span class="o">!=</span> <span class="nx">LayerKind</span><span class="p">.</span><span class="nx">NORMAL</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="32 "></span>            <span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">getActiveLayerIndex</span><span class="p">()</span> <span class="o">-</span> <span class="mf">1</span><span class="p">)</span>
-<span class="linenos" data-linenos="33 "></span>        <span class="p">};</span>
-<span class="linenos" data-linenos="34 "></span>
-<span class="linenos" data-linenos="35 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">kind</span> <span class="o">!=</span> <span class="nx">LayerKind</span><span class="p">.</span><span class="nx">SmartObject</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="36 "></span>            <span class="nx">executeAction</span><span class="p">(</span><span class="nx">sTID</span><span class="p">(</span><span class="s1">&#39;copyToLayer&#39;</span><span class="p">),</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
-<span class="linenos" data-linenos="37 "></span>            <span class="nx">nameLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="38 "></span>        <span class="p">}</span>
-<span class="linenos" data-linenos="39 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="40 "></span>
-<span class="linenos" data-linenos="41 "></span>    <span class="nx">neural_depthmap</span><span class="p">();</span>
-<span class="linenos" data-linenos="42 "></span>
-<span class="linenos" data-linenos="43 "></span>    <span class="nx">nameLayer</span><span class="p">(</span><span class="s2">&quot;layer__depthMask_map&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="44 "></span>    <span class="nx">select_luminance</span><span class="p">();</span>
-<span class="linenos" data-linenos="45 "></span>
-<span class="linenos" data-linenos="46 "></span>    <span class="nx">layer_delete</span><span class="p">();</span>
-<span class="linenos" data-linenos="47 "></span>    <span class="nx">gotoLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="48 "></span>    <span class="nx">layer_delete</span><span class="p">();</span>
-<span class="linenos" data-linenos="49 "></span>    <span class="nx">createGroup</span><span class="p">(</span><span class="s2">&quot;Tiefe&quot;</span><span class="p">,</span> <span class="s2">&quot;passThrough&quot;</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="nx">f</span><span class="p">);</span>
+<span class="linenos" data-linenos="15 "></span>            <span class="nx">layer_copyLayers</span><span class="p">();</span> <span class="c1">//Ebenen kopieren (Apfel J)</span>
+<span class="linenos" data-linenos="16 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">kind</span> <span class="o">==</span> <span class="s2">&quot;LayerKind.SMARTOBJECT&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>                <span class="nx">rasterSmartObject</span><span class="p">();</span>
+<span class="linenos" data-linenos="18 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">layer_selectedIDX_get</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="20 "></span>                <span class="nx">layer_mergeLayers</span><span class="p">();</span> <span class="c1">//auf eine Ebene reduzieren (Apfel E)</span>
+<span class="linenos" data-linenos="21 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="23 "></span>            <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Abruch\n Eine Tiefenmakse von dieser Ebene kann nciht erstellt werden.&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span>            <span class="k">return</span><span class="p">;</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="27 "></span>
+<span class="linenos" data-linenos="28 "></span>    <span class="nx">nameLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>    <span class="c1">// move to TOP</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">hasBackground</span><span class="p">()</span> <span class="o">?</span> <span class="mf">0</span> <span class="o">:</span> <span class="mf">1</span><span class="p">;</span>
+<span class="linenos" data-linenos="32 "></span>    <span class="k">while</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="33 "></span>        <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos="34 "></span>    <span class="p">};</span>
+<span class="linenos" data-linenos="35 "></span>    <span class="nx">moveLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">,</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mf">1</span><span class="p">),</span> <span class="s2">&quot;up&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="36 "></span>    <span class="nx">gotoLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="37 "></span>    <span class="c1">// }</span>
+<span class="linenos" data-linenos="38 "></span>
+<span class="linenos" data-linenos="39 "></span>    <span class="nx">selection_loop</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos="40 "></span>        <span class="nx">neural_depthmap2</span><span class="p">();</span>
+<span class="linenos" data-linenos="41 "></span>        <span class="c1">// neural_depthmap();</span>
+<span class="linenos" data-linenos="42 "></span>    <span class="p">});</span>
+<span class="linenos" data-linenos="43 "></span>
+<span class="linenos" data-linenos="44 "></span>    <span class="nx">nameLayer</span><span class="p">(</span><span class="s2">&quot;layer__depthMask_map&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="45 "></span>    <span class="nx">select_luminance</span><span class="p">();</span>
+<span class="linenos" data-linenos="46 "></span>
+<span class="linenos" data-linenos="47 "></span>    <span class="nx">layer_delete</span><span class="p">();</span>
+<span class="linenos" data-linenos="48 "></span>    <span class="nx">gotoLayer</span><span class="p">(</span><span class="s2">&quot;helper__depthMask_image&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="49 "></span>    <span class="nx">layer_delete</span><span class="p">();</span>
 <span class="linenos" data-linenos="50 "></span>
-<span class="linenos" data-linenos="51 "></span>    <span class="nx">maskFromSelection</span><span class="p">();</span>
-<span class="linenos" data-linenos="52 "></span>
-<span class="linenos" data-linenos="53 "></span>    <span class="c1">// if (layer_checkExistence(layer_getIDXbyString(&quot;Dodge &amp; Burn △◊▽&quot;)[0])) {</span>
-<span class="linenos" data-linenos="54 "></span>    <span class="c1">//     moveLayer(&quot;Tiefe&quot;, &quot;Dodge &amp; Burn △◊▽&quot;, &quot;up&quot;);</span>
-<span class="linenos" data-linenos="55 "></span>    <span class="c1">// }</span>
-<span class="linenos" data-linenos="56 "></span>
-<span class="linenos" data-linenos="57 "></span>
-<span class="linenos" data-linenos="58 "></span>
-<span class="linenos" data-linenos="59 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">startIDXs</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="60 "></span>        <span class="nx">moveLayer</span><span class="p">(</span><span class="s2">&quot;Tiefe&quot;</span><span class="p">,</span> <span class="nx">startIDXs</span><span class="p">[</span><span class="nx">startIDXs</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">],</span> <span class="s2">&quot;up&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="61 "></span>        <span class="c1">// alert(&quot;length&quot;);</span>
-<span class="linenos" data-linenos="62 "></span>        <span class="c1">// return;</span>
-<span class="linenos" data-linenos="63 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="s2">&quot;Dodge &amp; Burn △◊▽&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">]))</span> <span class="p">{</span>
-<span class="linenos" data-linenos="64 "></span>        <span class="nx">moveLayer</span><span class="p">(</span><span class="s2">&quot;Tiefe&quot;</span><span class="p">,</span> <span class="s2">&quot;Dodge &amp; Burn △◊▽&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="65 "></span>        <span class="c1">// alert(&quot;Dodge&quot;);</span>
-<span class="linenos" data-linenos="66 "></span>        <span class="c1">// return;</span>
-<span class="linenos" data-linenos="67 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="s2">&quot;Einstellungen&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">]))</span> <span class="p">{</span>
-<span class="linenos" data-linenos="68 "></span>        <span class="nx">moveLayer</span><span class="p">(</span><span class="s2">&quot;Tiefe&quot;</span><span class="p">,</span> <span class="s2">&quot;Einstellungen&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="69 "></span>        <span class="c1">// alert(&quot;Einstellungen&quot;);</span>
-<span class="linenos" data-linenos="70 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="71 "></span>
-<span class="linenos" data-linenos="72 "></span>
-<span class="linenos" data-linenos="73 "></span>
-<span class="linenos" data-linenos="74 "></span>
-<span class="linenos" data-linenos="75 "></span>    <span class="nx">gotoLayer</span><span class="p">(</span><span class="s2">&quot;Tiefe&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="76 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="51 "></span>
+<span class="linenos" data-linenos="52 "></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">cancel</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="53 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">_get</span> <span class="o">==</span> <span class="s2">&quot;Selection&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="54 "></span>            <span class="nx">layer_selectedIDX_set</span><span class="p">(</span><span class="nx">startIDXs</span><span class="p">);</span>
+<span class="linenos" data-linenos="55 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">_kind</span> <span class="o">==</span> <span class="s2">&quot;nicht Tiefe&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="56 "></span>                <span class="nx">select_invert</span><span class="p">();</span>
+<span class="linenos" data-linenos="57 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="58 "></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="59 "></span>            <span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">startIDXs</span><span class="p">[</span><span class="nx">startIDXs</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">])</span>
+<span class="linenos" data-linenos="60 "></span>            <span class="nx">selection2mask</span><span class="p">(</span><span class="nx">_kind</span><span class="p">);</span>
+<span class="linenos" data-linenos="61 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">_kind</span> <span class="o">==</span> <span class="s2">&quot;nicht Tiefe&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="62 "></span>                <span class="nx">gotoMask</span><span class="p">();</span>
+<span class="linenos" data-linenos="63 "></span>                <span class="nx">invert</span><span class="p">();</span>
+<span class="linenos" data-linenos="64 "></span>                <span class="nx">gotoFill</span><span class="p">();</span>
+<span class="linenos" data-linenos="65 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="66 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="67 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="68 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/ready/tiefenmaske.js"></a></p>

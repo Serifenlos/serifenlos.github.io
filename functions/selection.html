@@ -502,6 +502,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#select_farbbereich" class="md-nav__link">
+    select_Farbbereich
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#selection2mask" class="md-nav__link">
     selection2mask
   </a>
@@ -525,6 +532,13 @@
         <li class="md-nav__item">
   <a href="#selection_loop" class="md-nav__link">
     selection_loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mask2image" class="md-nav__link">
+    mask2image
   </a>
   
 </li>
@@ -675,6 +689,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#select_farbbereich" class="md-nav__link">
+    select_Farbbereich
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#selection2mask" class="md-nav__link">
     selection2mask
   </a>
@@ -698,6 +719,13 @@
         <li class="md-nav__item">
   <a href="#selection_loop" class="md-nav__link">
     selection_loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mask2image" class="md-nav__link">
+    mask2image
   </a>
   
 </li>
@@ -800,14 +828,19 @@ oder activeDocument.selection.deselect();</p>
 <span class="linenos" data-linenos="24 "></span>        <span class="p">}</span>
 <span class="linenos" data-linenos="25 "></span>    <span class="p">}</span>
 <span class="linenos" data-linenos="26 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="27 "></span>
-<span class="linenos" data-linenos="28 "></span><span class="c1">// _kind = &#39;bunt&#39; || &#39;unbunt&#39;</span>
-<span class="linenos" data-linenos="29 "></span><span class="c1">// _calulation = &#39;lighten&#39; || &#39;screen&#39; || …</span>
-<span class="linenos" data-linenos="30 "></span><span class="c1">// _source = &#39;merge&#39; || &#39;LayerName&#39; || ‘this‘</span>
-<span class="linenos" data-linenos="31 "></span><span class="c1">// _get = &#39;selection&#39; || &#39;folder&#39;</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/select_saturation.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">select_saturation</span><span class="p">(</span><span class="s2">&quot;bunt&quot;</span><span class="p">,</span> <span class="s2">&quot;lighten&quot;</span><span class="p">,</span> <span class="s2">&quot;merged&quot;</span><span class="p">,</span> <span class="s2">&quot;folder&quot;</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_kind <code class="highlight"><span class="err">bunt</span></code> <code class="highlight"><span class="err">unbunt</span></code></li>
+<li>_calulation <code class="highlight"><span class="err">lighten</span></code> <code class="highlight"><span class="err">screen</span></code> …</li>
+<li>_source <code class="highlight"><span class="err">merge</span></code> <code class="highlight"><span class="err">LayerName</span></code> <code class="highlight"><span class="err">this</span></code></li>
+<li>_get <code class="highlight"><span class="err">selection</span></code> <code class="highlight"><span class="err">folder</span></code></li>
+</ul>
+</details>
+</details>
 <h3 id="select_sky">select_sky<a class="headerlink" href="#select_sky" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="select_sky(_sampleAllLayers);"></button></p>
 <details><summary>select_sky(_sampleAllLayers);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">select_sky</span><span class="p">(</span><span class="nx">_sampleAllLayers</span><span class="p">)</span> <span class="p">{</span>
@@ -822,6 +855,38 @@ oder activeDocument.selection.deselect();</p>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/select_sky.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">select_sky</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>_sampleAllLayers <code class="highlight"><span class="err">true</span></code> <code class="highlight"><span class="err">false</span></code></li>
+</ul>
+</details>
+</details>
+<h3 id="select_farbbereich">select_Farbbereich<a class="headerlink" href="#select_farbbereich" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="select_Farbbereich(_bereich);"></button></p>
+<details><summary>select_Farbbereich(_bereich);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">select_Farbbereich</span><span class="p">(</span><span class="nx">_bereich</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">),</span> <span class="nx">s2t</span><span class="p">(</span><span class="nx">_bereich</span><span class="p">));</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="nx">d</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;colorModel&quot;</span><span class="p">),</span> <span class="mf">0</span><span class="p">);</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;colorRange&quot;</span><span class="p">),</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/select_Farbbereich.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">select_Farbbereich</span><span class="p">(</span><span class="s2">&quot;outOfGamut&quot;</span><span class="p">);</span>
+</code></pre></div>
+<details class="b"><summary>B</summary><ul>
+<li>outOfGamut <code class="highlight"><span class="err">outOfGamut</span></code></li>
+<li>radius <code class="highlight"><span class="err">red</span></code></li>
+<li>yellows <code class="highlight"><span class="err">yellow</span></code></li>
+<li>graininess <code class="highlight"><span class="err">green</span></code></li>
+<li>cyans <code class="highlight"><span class="err">cyan</span></code></li>
+<li>blues <code class="highlight"><span class="err">blue</span></code></li>
+<li>magenta <code class="highlight"><span class="err">magenta</span></code></li>
+</ul>
+</details>
+</details>
 <h3 id="selection2mask">selection2mask<a class="headerlink" href="#selection2mask" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="selection2mask(_mask_name);"></button></p>
 <details><summary>selection2mask(_mask_name);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span> <span class="nx">selection2mask</span><span class="p">(</span><span class="nx">_mask_name</span><span class="p">)</span> <span class="p">{</span>
@@ -883,7 +948,7 @@ oder activeDocument.selection.deselect();</p>
 <span class="linenos" data-linenos=" 8 "></span>            <span class="nx">selection_calc</span><span class="p">();</span>
 <span class="linenos" data-linenos=" 9 "></span>        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="10 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">currentIDX</span> <span class="o">===</span> <span class="nx">startIDX</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="11 "></span>                <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Keine Ebene gefunden.&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>                <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;keine geeignete Ebene gefunden&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos="12 "></span>                <span class="nx">cancel</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 <span class="linenos" data-linenos="13 "></span>                <span class="k">return</span><span class="p">;</span>
 <span class="linenos" data-linenos="14 "></span>            <span class="p">}</span>
@@ -907,8 +972,35 @@ oder activeDocument.selection.deselect();</p>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/selection_loop.js"></a></p>
-<div class="admonition warning hide">
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">selection_loop</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nx">channel_setSaturation</span><span class="p">(</span><span class="nx">_source</span><span class="p">,</span> <span class="nx">_calculation</span><span class="p">)});</span>
+</code></pre></div>
+</details>
+<h3 id="mask2image">mask2image<a class="headerlink" href="#mask2image" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="mask2image(_name);"></button></p>
+<details><summary>mask2image(_name);</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">mask2image</span><span class="p">(</span><span class="nx">_name</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">layer_selectedIDX_get</span><span class="p">().</span><span class="nx">length</span> <span class="o">===</span> <span class="mf">1</span> <span class="o">&amp;&amp;</span> <span class="nx">hasLayerMask</span><span class="p">())</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="kd">var</span> <span class="nx">name_sorce</span> <span class="o">=</span> <span class="nx">layer_getName</span><span class="p">(</span><span class="nx">getActiveLayerIndex</span><span class="p">());</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="nx">gotoMask</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nx">loadSelectionOfMask</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nx">select_invert</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nx">layer_create</span><span class="p">(</span><span class="nx">_name</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nx">name_sorce</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nx">fill</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">,</span> <span class="mf">100</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nx">selection_deselect</span><span class="p">();</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Abbruch!\nwähle genau eine Ebene mit Maske aus&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/selection/mask2image.js"></a></p>
+<details class="a" open="open"><summary>A</summary><div class="highlight"><pre><span></span><code><span class="nx">doc</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s2">&quot;Mask2Image&quot;</span><span class="p">,</span> <span class="s2">&quot;mask2image(&#39;Mask2Image&#39;)&quot;</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
+<ul>
+<li>select_outOfGamut</li>
+</ul>
 </div>
                 
               

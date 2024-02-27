@@ -8,11 +8,17 @@
       
       
       
-      
         <link rel="canonical" href="https://serifenlos.github.io/functions/dialog.html">
       
+      
+        <link rel="prev" href="channel.html">
+      
+      
+        <link rel="next" href="layer.html">
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
@@ -20,34 +26,37 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ffffff">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
-    
+      
+
+
     
     
       
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-
+    
     
     
   </head>
@@ -60,8 +69,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -78,15 +85,21 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
     <a href="../index.html" title="SimonScript.jsx" class="md-header__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
       
   <img src="../assets/images/SS_logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -105,25 +118,31 @@
       </div>
     </div>
     
+      
+    
+    
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Suche">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Zurücksetzen" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -134,7 +153,7 @@
           <div class="md-search-result__meta">
             Suche wird initialisiert
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -143,11 +162,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/Serifenlos/SimonScript" title="Quellcode" class="md-source" data-md-component="source">
+        <a href="https://github.com/Serifenlos/SimonScript" title="Zum Repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -156,11 +174,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -174,6 +195,7 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="SimonScript.jsx" class="md-nav__button md-logo" aria-label="SimonScript.jsx" data-md-component="logo">
@@ -185,11 +207,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/Serifenlos/SimonScript" title="Quellcode" class="md-source" data-md-component="source">
+      <a href="https://github.com/Serifenlos/SimonScript" title="Zum Repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -201,14 +222,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        Home
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
       </a>
     </li>
   
@@ -216,130 +242,204 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      <label class="md-nav__link" for="__nav_2">
-        PhotoshopScripts
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="PhotoshopScripts" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          PhotoshopScripts
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
+  <span class="md-ellipsis">
+    PhotoshopScripts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            PhotoshopScripts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../PS_Scripts/startschuss.html" class="md-nav__link">
-        Startschuss
+        
+  
+  <span class="md-ellipsis">
+    Startschuss
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../PS_Scripts/schlussschuss.html" class="md-nav__link">
-        Schlußschuss
+        
+  
+  <span class="md-ellipsis">
+    Schlußschuss
+  </span>
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
-      
-      <label class="md-nav__link" for="__nav_3">
-        functions
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="functions" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          functions
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
+  <span class="md-ellipsis">
+    functions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="basic.html" class="md-nav__link">
-        basic
+        
+  
+  <span class="md-ellipsis">
+    basic
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="channel.html" class="md-nav__link">
-        channel
+        
+  
+  <span class="md-ellipsis">
+    channel
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          dialog
+          
+  
+  <span class="md-ellipsis">
+    dialog
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="dialog.html" class="md-nav__link md-nav__link--active">
-        dialog
+        
+  
+  <span class="md-ellipsis">
+    dialog
+  </span>
+  
+
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
@@ -353,14 +453,18 @@
       
         <li class="md-nav__item">
   <a href="#dialog_chooselayer" class="md-nav__link">
-    dialog_chooseLayer
+    <span class="md-ellipsis">
+      dialog_chooseLayer
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#dialog_bitdepth" class="md-nav__link">
-    dialog_bitDepth
+    <span class="md-ellipsis">
+      dialog_bitDepth
+    </span>
   </a>
   
 </li>
@@ -372,183 +476,305 @@
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="layer.html" class="md-nav__link">
-        layer
+        
+  
+  <span class="md-ellipsis">
+    layer
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="loopFiles.html" class="md-nav__link">
-        loopFiles
+        
+  
+  <span class="md-ellipsis">
+    loopFiles
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="LUT-burn.html" class="md-nav__link">
-        LUT-burn
+        
+  
+  <span class="md-ellipsis">
+    LUT-burn
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="LUT-dodge.html" class="md-nav__link">
-        LUT-dodge
+        
+  
+  <span class="md-ellipsis">
+    LUT-dodge
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="utils.html" class="md-nav__link">
-        utils
+        
+  
+  <span class="md-ellipsis">
+    utils
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="meta.html" class="md-nav__link">
-        meta
+        
+  
+  <span class="md-ellipsis">
+    meta
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="ready.html" class="md-nav__link">
-        ready
+        
+  
+  <span class="md-ellipsis">
+    ready
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="save.html" class="md-nav__link">
-        save
+        
+  
+  <span class="md-ellipsis">
+    save
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="selection.html" class="md-nav__link">
-        selection
+        
+  
+  <span class="md-ellipsis">
+    selection
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="view.html" class="md-nav__link">
-        view
+        
+  
+  <span class="md-ellipsis">
+    view
+  </span>
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
-        helpful
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="helpful" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          helpful
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
+  
+  <span class="md-ellipsis">
+    helpful
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            helpful
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../helpful/snippets.html" class="md-nav__link">
-        snippets
+        
+  
+  <span class="md-ellipsis">
+    snippets
+  </span>
+  
+
       </a>
     </li>
   
 
-          
+              
             
+              
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../helpful/charID.html" class="md-nav__link">
-        charID
+        
+  
+  <span class="md-ellipsis">
+    charID
+  </span>
+  
+
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -565,6 +791,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
@@ -578,14 +805,18 @@
       
         <li class="md-nav__item">
   <a href="#dialog_chooselayer" class="md-nav__link">
-    dialog_chooseLayer
+    <span class="md-ellipsis">
+      dialog_chooseLayer
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#dialog_bitdepth" class="md-nav__link">
-    dialog_bitDepth
+    <span class="md-ellipsis">
+      dialog_bitDepth
+    </span>
   </a>
   
 </li>
@@ -598,79 +829,85 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                
-                  <h1>dialog</h1>
-                
-                <h3 id="dialog_chooselayer">dialog_chooseLayer<a class="headerlink" href="#dialog_chooselayer" title="Permanent link">&para;</a></h3>
+                  
+
+
+  <h1>dialog</h1>
+
+<h3 id="dialog_chooselayer">dialog_chooseLayer<a class="headerlink" href="#dialog_chooselayer" title="Permanent link">&para;</a></h3>
 <p>part of Startschuss</p>
 <p class="btn_p"><button class="btn" data-clipboard-text="dialog_chooseLayer();"></button></p>
-<details><summary>dialog_chooseLayer();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span>  <span class="nx">dialog_chooseLayer</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">saveLayer</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Window</span><span class="p">(</span><span class="s2">&quot;dialog&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">var</span> <span class="nx">visibility_button</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;Sichtbarkeit&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;ein/aus&quot;</span><span class="p">});</span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="kd">var</span> <span class="nx">selectUp_button</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;rauf&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;rauf&quot;</span><span class="p">});</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="kd">var</span> <span class="nx">selectAll_button</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;alle&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;alle&quot;</span><span class="p">});</span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="kd">var</span> <span class="nx">selectDown_button</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;runter&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;runter&quot;</span><span class="p">});</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="kd">var</span> <span class="nx">reset_button</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;reset&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;reset&quot;</span><span class="p">});</span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="kd">var</span> <span class="nx">cancel_button</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;Abbruch&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Abbruch&quot;</span><span class="p">});</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="kd">var</span> <span class="nx">ok_button</span> <span class="o">=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;RUN&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;run&quot;</span><span class="p">});</span>
-<span class="linenos" data-linenos="11 "></span>    <span class="nx">visibility_button</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="12 "></span>        <span class="nx">toogleVisibility</span><span class="p">();</span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="nx">selectUp_button</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="15 "></span>        <span class="nx">selectLayer</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="17 "></span>    <span class="nx">selectDown_button</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="18 "></span>        <span class="nx">selectLayer</span><span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
-<span class="linenos" data-linenos="19 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="20 "></span>    <span class="nx">selectAll_button</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="21 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">hasBackground</span><span class="p">())</span> <span class="p">{</span>
-<span class="linenos" data-linenos="22 "></span>            <span class="nx">gotoLayer</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-<span class="linenos" data-linenos="23 "></span>            <span class="nx">nameLayer</span><span class="p">(</span><span class="s2">&quot;HG&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="p">}</span>
-<span class="linenos" data-linenos="25 "></span>        <span class="nx">selectLayers</span><span class="p">(</span><span class="s2">&quot;selectAllLayers&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="26 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="27 "></span>    <span class="nx">reset_button</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="28 "></span>        <span class="nx">selectLayers</span><span class="p">(</span><span class="s2">&quot;selectNoLayers&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos="29 "></span>        <span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">saveLayer</span><span class="p">);</span>
-<span class="linenos" data-linenos="30 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="31 "></span>    <span class="nx">cancel_button</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="32 "></span>        <span class="nx">cancel</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-<span class="linenos" data-linenos="33 "></span>        <span class="nx">w</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="linenos" data-linenos="34 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="35 "></span>    <span class="nx">ok_button</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="36 "></span>        <span class="nx">w</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="linenos" data-linenos="37 "></span>    <span class="p">}</span>
+<details>
+<summary>dialog_chooseLayer();</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w">  </span><span class="nx">dialog_chooseLayer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">saveLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Window</span><span class="p">(</span><span class="s2">&quot;dialog&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">visibility_button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sichtbarkeit&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ein/aus&quot;</span><span class="p">});</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">selectUp_button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rauf&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rauf&quot;</span><span class="p">});</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">selectAll_button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;alle&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;alle&quot;</span><span class="p">});</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">selectDown_button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;runter&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;runter&quot;</span><span class="p">});</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">reset_button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;reset&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;reset&quot;</span><span class="p">});</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cancel_button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Abbruch&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Abbruch&quot;</span><span class="p">});</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ok_button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">w</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;RUN&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="p">});</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="nx">visibility_button</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="nx">toogleVisibility</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nx">selectUp_button</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="nx">selectLayer</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nx">selectDown_button</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="nx">selectLayer</span><span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="nx">selectAll_button</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hasBackground</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="nx">gotoLayer</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">            </span><span class="nx">nameLayer</span><span class="p">(</span><span class="s2">&quot;HG&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="nx">selectLayers</span><span class="p">(</span><span class="s2">&quot;selectAllLayers&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="nx">reset_button</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">        </span><span class="nx">selectLayers</span><span class="p">(</span><span class="s2">&quot;selectNoLayers&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="29 "></span><span class="w">        </span><span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">saveLayer</span><span class="p">);</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">    </span><span class="nx">cancel_button</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="32 "></span><span class="w">        </span><span class="nx">cancel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="linenos" data-linenos="33 "></span><span class="w">        </span><span class="nx">w</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="linenos" data-linenos="34 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="35 "></span><span class="w">    </span><span class="nx">ok_button</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="36 "></span><span class="w">        </span><span class="nx">w</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="linenos" data-linenos="37 "></span><span class="w">    </span><span class="p">}</span>
 <span class="linenos" data-linenos="38 "></span>
-<span class="linenos" data-linenos="39 "></span>    <span class="nx">w</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+<span class="linenos" data-linenos="39 "></span><span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
 <span class="linenos" data-linenos="40 "></span><span class="p">};</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/simon/Arbeit/GitHub/SimonScript/source/_functions/dialog/dialog_chooseLayer.js"></a></p>
 <h3 id="dialog_bitdepth">dialog_bitDepth<a class="headerlink" href="#dialog_bitdepth" title="Permanent link">&para;</a></h3>
 <p class="btn_p"><button class="btn" data-clipboard-text="dialog_bitdepth();"></button></p>
-<details><summary>dialog_bitdepth();</summary><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span> <span class="nx">dialog_bitdepth</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 2 "></span>    <span class="kd">var</span> <span class="nx">dialog_bit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Window</span><span class="p">(</span><span class="s2">&quot;dialog&quot;</span><span class="p">,</span> <span class="s2">&quot;Auf 8bit oder weiter?&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">var</span> <span class="nx">stxt</span> <span class="o">=</span> <span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="nx">stxt</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;statictext&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;Das Bild hat &quot;</span> <span class="o">+</span> <span class="nx">getBitDepth</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;bit.&quot;</span><span class="p">);</span>
+<details>
+<summary>dialog_bitdepth();</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">dialog_bitdepth</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">dialog_bit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Window</span><span class="p">(</span><span class="s2">&quot;dialog&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Auf 8bit oder weiter?&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">stxt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="nx">stxt</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;statictext&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Das Bild hat &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">getBitDepth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;bit.&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="kd">var</span> <span class="nx">myButtonGroup</span> <span class="o">=</span> <span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="kd">var</span> <span class="nx">bit8</span> <span class="o">=</span> <span class="nx">myButtonGroup</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;8bit&quot;</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="kd">var</span> <span class="nx">weiter</span> <span class="o">=</span> <span class="nx">myButtonGroup</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="s2">&quot;weiter&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myButtonGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">bit8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myButtonGroup</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;8bit&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">weiter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myButtonGroup</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;weiter&quot;</span><span class="p">);</span>
 <span class="linenos" data-linenos=" 9 "></span>
-<span class="linenos" data-linenos="10 "></span>    <span class="nx">bit8</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="11 "></span>        <span class="nx">setBitDepth</span><span class="p">(</span><span class="mf">8</span><span class="p">);</span>
-<span class="linenos" data-linenos="12 "></span>        <span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="nx">weiter</span><span class="p">.</span><span class="nx">onClick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="15 "></span>        <span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nx">bit8</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="nx">setBitDepth</span><span class="p">(</span><span class="mf">8</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nx">weiter</span><span class="p">.</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="p">}</span>
 <span class="linenos" data-linenos="17 "></span>
-<span class="linenos" data-linenos="18 "></span>    <span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="nx">dialog_bit</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
 <span class="linenos" data-linenos="19 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
@@ -678,67 +915,41 @@
 <div class="admonition warning hide">
 <p class="admonition-title">not documented functions</p>
 </div>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
-        
-<footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="channel.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: channel" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Zurück
-              </span>
-              channel
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="layer.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: layer" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Weiter
-              </span>
-              layer
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -749,15 +960,14 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-<script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
     
 
-<script src="../assets/javascripts/iframe-worker.js"></script>
-<script src="../search/search_index.js"></script>
-
 
     
-      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
         <script src="../assets/javascripts/extra.js"></script>
       

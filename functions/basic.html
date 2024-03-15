@@ -1209,6 +1209,60 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#adjusthue" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustHue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjustlayer_curves_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustLayer_curves_set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjustlayer_sat_eyedropper" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustLayer_sat_eyedropper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjustlayer_sat_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustLayer_sat_set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_getcolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      app_getColor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_simulatekeypress_alt3" class="md-nav__link">
+    <span class="md-ellipsis">
+      app_simulateKeyPress_alt3
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2383,6 +2437,60 @@
   <a href="#t2s" class="md-nav__link">
     <span class="md-ellipsis">
       t2s
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusthue" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustHue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjustlayer_curves_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustLayer_curves_set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjustlayer_sat_eyedropper" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustLayer_sat_eyedropper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjustlayer_sat_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjustLayer_sat_set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_getcolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      app_getColor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app_simulatekeypress_alt3" class="md-nav__link">
+    <span class="md-ellipsis">
+      app_simulateKeyPress_alt3
     </span>
   </a>
   
@@ -4226,6 +4334,164 @@ erstelle eine Farbfläche</p>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/_t2s.js"></a></p>
+<h3 id="adjusthue">adjustHue<a class="headerlink" href="#adjusthue" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="adjustHue(hue, amount);"></button></p>
+<details>
+<summary>adjustHue(hue, amount);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">adjustHue</span><span class="p">(</span><span class="nx">hue</span><span class="p">,</span><span class="w"> </span><span class="nx">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">hue</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">amount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">360</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">360</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/adjustHue.js"></a></p>
+<h3 id="adjustlayer_curves_set">adjustLayer_curves_set<a class="headerlink" href="#adjustlayer_curves_set" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="adjustLayer_curves_set(horizontal, vertical, horizontal2, vertical2);"></button></p>
+<details>
+<summary>adjustLayer_curves_set(horizontal, vertical, horizontal2, vertical2);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">adjustLayer_curves_set</span><span class="p">(</span><span class="nx">horizontal</span><span class="p">,</span><span class="w"> </span><span class="nx">vertical</span><span class="p">,</span><span class="w"> </span><span class="nx">horizontal2</span><span class="p">,</span><span class="w"> </span><span class="nx">vertical2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">l2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;adjustmentLayer&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nx">d2</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKind&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKindType&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKindCustom&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="nx">r2</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;composite&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">r2</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nx">d4</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;horizontal&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">horizontal</span><span class="p">);</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="nx">d4</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;vertical&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">vertical</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="nx">l2</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d4</span><span class="p">);</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="nx">d5</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;horizontal&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">horizontal2</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="nx">d5</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;vertical&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">vertical2</span><span class="p">);</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="nx">l2</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d5</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;curve&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">l2</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="nx">l</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;curvesAdjustment&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d3</span><span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nx">d2</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;adjustment&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">l</span><span class="p">);</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;curves&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="28 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/adjustLayer_curves_set.js"></a></p>
+<h3 id="adjustlayer_sat_eyedropper">adjustLayer_sat_eyedropper<a class="headerlink" href="#adjustlayer_sat_eyedropper" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="adjustLayer_sat_eyedropper();"></button></p>
+<details>
+<summary>adjustLayer_sat_eyedropper();</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">adjustLayer_sat_eyedropper</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="nx">r</span><span class="p">.</span><span class="nx">putClass</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;eyedropper2Tool&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="c1">// return;</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">)</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/adjustLayer_sat_eyedropper.js"></a></p>
+<h3 id="adjustlayer_sat_set">adjustLayer_sat_set<a class="headerlink" href="#adjustlayer_sat_set" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="adjustLayer_sat_set(_range, _beginRamp, _beginSustain, _endSustain, _endRamp, _hue, _saturation, _lightness);"></button></p>
+<details>
+<summary>adjustLayer_sat_set(_range, _beginRamp, _beginSustain, _endSustain, _endRamp, _hue, _saturation, _lightness);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">adjustLayer_sat_set</span><span class="p">(</span><span class="nx">_range</span><span class="p">,</span><span class="w"> </span><span class="nx">_beginRamp</span><span class="p">,</span><span class="w"> </span><span class="nx">_beginSustain</span><span class="p">,</span><span class="w"> </span><span class="nx">_endSustain</span><span class="p">,</span><span class="w"> </span><span class="nx">_endRamp</span><span class="p">,</span><span class="w"> </span><span class="nx">_hue</span><span class="p">,</span><span class="w"> </span><span class="nx">_saturation</span><span class="p">,</span><span class="w"> </span><span class="nx">_lightness</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionList</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_hue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_hue</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">_hue</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_saturation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_saturation</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">_saturation</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_lightness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_lightness</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">_lightness</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;adjustmentLayer&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;null&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">r</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nx">d2</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKind&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKindType&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;presetKindCustom&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;localRange&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_range</span><span class="p">);</span><span class="w"> </span><span class="c1">// red=1 || yellow=2 …</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;beginRamp&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_beginRamp</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;beginSustain&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_beginSustain</span><span class="p">);</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;endSustain&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_endSustain</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;endRamp&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_endRamp</span><span class="p">);</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;hue&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_hue</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;saturation&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_saturation</span><span class="p">);</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="nx">d3</span><span class="p">.</span><span class="nx">putInteger</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;lightness&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_lightness</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="nx">l</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;hueSatAdjustmentV2&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d3</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="nx">d2</span><span class="p">.</span><span class="nx">putList</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;adjustment&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">l</span><span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="nx">d</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;hueSaturation&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d2</span><span class="p">);</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="linenos" data-linenos="27 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/adjustLayer_sat_set.js"></a></p>
+<h3 id="app_getcolor">app_getColor<a class="headerlink" href="#app_getcolor" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="app_getColor(_model, _fokus);"></button></p>
+<details>
+<summary>app_getColor(_model, _fokus);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">app_getColor</span><span class="p">(</span><span class="nx">_model</span><span class="p">,</span><span class="w"> </span><span class="nx">_fokus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">colors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">_fokus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;vordergrund&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">_fokus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;foreground&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">foregroundColor</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">_model</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;rgb&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">.</span><span class="nx">rgb</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="nx">colors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">red</span><span class="p">));</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="nx">colors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">green</span><span class="p">));</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="nx">colors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">blue</span><span class="p">));</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">_model</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;hsb&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">_model</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;hsl&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">.</span><span class="nx">hsb</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="nx">colors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">hue</span><span class="p">));</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">            </span><span class="nx">colors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">saturation</span><span class="p">));</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="nx">colors</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">model</span><span class="p">.</span><span class="nx">brightness</span><span class="p">));</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">colors</span><span class="p">;</span>
+<span class="linenos" data-linenos="25 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/app_getColor.js"></a></p>
+<h3 id="app_simulatekeypress_alt3">app_simulateKeyPress_alt3<a class="headerlink" href="#app_simulatekeypress_alt3" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="app_simulateKeyPress_alt3();"></button></p>
+<details>
+<summary>app_simulateKeyPress_alt3();</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">app_simulateKeyPress_alt3</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">bringToFront</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">appleScript</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tell application &#39;System Events&#39; to keystroke &#39;3&#39; using {option down}&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">system</span><span class="p">(</span><span class="s2">&quot;osascript -e &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">appleScript</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&#39;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="c1">// app.bringToFront();</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="c1">// alert(e)</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/app_simulateKeyPress_alt3.js"></a></p>
+<p>{{arrayCorrect}}
+{{array_contains}}
+{{gotoLayer_byID}}
+{{interpolation_GigaPixel}}
+{{interpolation_PS}}
+{{interpolation_PhotoAI}}
+{{text2Clipboard}}
+{{workingProfile_get}}
+{{workingProfile_set}}</p>
 <div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
 <ul>

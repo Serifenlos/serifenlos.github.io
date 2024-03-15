@@ -748,6 +748,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#select_outofgamut" class="md-nav__link">
+    <span class="md-ellipsis">
+      select_outOfGamut
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -996,6 +1005,15 @@
   <a href="#mask2image" class="md-nav__link">
     <span class="md-ellipsis">
       mask2image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select_outofgamut" class="md-nav__link">
+    <span class="md-ellipsis">
+      select_outOfGamut
     </span>
   </a>
   
@@ -1375,14 +1393,54 @@ oder activeDocument.selection.deselect();</p>
 <p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/selection/mask2image.js"></a></p>
 <details class="a" open="open">
 <summary>A</summary>
-<div class="highlight"><pre><span></span><code><span class="nx">doc</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s2">&quot;Mask2Image&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mask2image(&#39;Mask2Image&#39;)&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">doc</span><span class="p">.</span><span class="nx">suspendHistory</span><span class="p">(</span><span class="s2">&quot;Mask2Image&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mask2image(&quot;</span><span class="nx">Mask2Image</span><span class="s2">&quot;)&quot;</span><span class="p">);</span>
 </code></pre></div>
 </details>
-<div class="admonition warning show">
+<h3 id="select_outofgamut">select_outOfGamut<a class="headerlink" href="#select_outofgamut" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="select_outOfGamut(_kind, _get);"></button></p>
+<details>
+<summary>select_outOfGamut(_kind, _get);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">select_outOfGamut</span><span class="p">(</span><span class="nx">_kind</span><span class="p">,</span><span class="w"> </span><span class="nx">_get</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="c1">// _get = &#39;Selection&#39; || &#39;Folder&#39;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">startIDXs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layer_selectedIDX_get</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="nx">cancel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">getMet_softproof_profile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getMeta_softproof</span><span class="p">()[</span><span class="mf">0</span><span class="p">];</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">workingProfile_get1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">workingProfile_get</span><span class="p">(</span><span class="s2">&quot;CMYK&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">getMet_softproof_profile</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">workingProfile_get1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">getMet_softproof_profile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="nx">workingProfile_set</span><span class="p">(</span><span class="s2">&quot;CMYK&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">getMet_softproof_profile</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="nx">gotoFill</span><span class="p">();</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="nx">selection_loop</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="nx">select_Farbbereich</span><span class="p">(</span><span class="s2">&quot;outOfGamut&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="p">});</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">workingProfile_get1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">getMet_softproof_profile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">            </span><span class="nx">workingProfile_set</span><span class="p">(</span><span class="s2">&quot;CMYK&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">workingProfile_get1</span><span class="p">);</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">cancel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">_get</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;Selection&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">                </span><span class="nx">layer_selectedIDX_set</span><span class="p">(</span><span class="nx">startIDXs</span><span class="p">);</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">                </span><span class="nx">gotoLayer</span><span class="p">(</span><span class="nx">startIDXs</span><span class="p">[</span><span class="nx">startIDXs</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">])</span>
+<span class="linenos" data-linenos="29 "></span><span class="w">                </span><span class="nx">selection2mask</span><span class="p">(</span><span class="nx">_kind</span><span class="p">);</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">            </span><span class="p">}</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="32 "></span>
+<span class="linenos" data-linenos="33 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="34 "></span><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;kein Softproof eingestellt&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="35 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="36 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/selection/select_outOfGamut.js"></a></p>
+<div class="admonition warning hide">
 <p class="admonition-title">not documented functions</p>
-<ul>
-<li>select_outOfGamut</li>
-</ul>
 </div>
 
 

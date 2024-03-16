@@ -682,6 +682,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#savefile_v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      saveFile_v2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#savemultiformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      saveMultiformat
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -906,6 +924,24 @@
   <a href="#savepsd_v2" class="md-nav__link">
     <span class="md-ellipsis">
       savePSD_v2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#savefile_v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      saveFile_v2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#savemultiformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      saveMultiformat
     </span>
   </a>
   
@@ -1280,8 +1316,58 @@
 <div class="highlight"><pre><span></span><code><span class="nx">savePSD_v2</span><span class="p">(</span><span class="nx">file_RGB</span><span class="p">,</span><span class="w"> </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">);</span>
 </code></pre></div>
 </details>
-<div class="admonition warning hide">
+<h3 id="savefile_v2">saveFile_v2<a class="headerlink" href="#savefile_v2" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="saveFile_v2(_file, _saveOptions, _asCopy);"></button></p>
+<details>
+<summary>saveFile_v2(_file, _saveOptions, _asCopy);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">saveFile_v2</span><span class="p">(</span><span class="nx">_file</span><span class="p">,</span><span class="w"> </span><span class="nx">_saveOptions</span><span class="p">,</span><span class="w"> </span><span class="nx">_asCopy</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">doc</span><span class="p">.</span><span class="nx">saveAs</span><span class="p">(</span><span class="nx">_file</span><span class="p">,</span><span class="w"> </span><span class="nx">_saveOptions</span><span class="p">,</span><span class="w"> </span><span class="nx">_asCopy</span><span class="p">,</span><span class="w"> </span><span class="nx">Extension</span><span class="p">.</span><span class="nx">LOWERCASE</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/save/saveFile_v2.js"></a></p>
+<h3 id="savemultiformat">saveMultiformat<a class="headerlink" href="#savemultiformat" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="saveMultiformat(_file, _saveFormat, _asCopy, _qualityJPG, _alphaChannels, _withLayers);"></button></p>
+<details>
+<summary>saveMultiformat(_file, _saveFormat, _asCopy, _qualityJPG, _alphaChannels, _withLayers);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">saveMultiformat</span><span class="p">(</span><span class="nx">_file</span><span class="p">,</span><span class="w"> </span><span class="nx">_saveFormat</span><span class="p">,</span><span class="w"> </span><span class="nx">_asCopy</span><span class="p">,</span><span class="w"> </span><span class="nx">_qualityJPG</span><span class="p">,</span><span class="w"> </span><span class="nx">_alphaChannels</span><span class="p">,</span><span class="w"> </span><span class="nx">_withLayers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">_saveFormat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;tif&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">saveOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TiffSaveOptions</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">alphaChannels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_alphaChannels</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">byteOrder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ByteOrder</span><span class="p">.</span><span class="nx">IBM</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">embedColorProfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">imageCompression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">TIFFEncoding</span><span class="p">.</span><span class="nx">TIFFLZW</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">layers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_withLayers</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">spotColors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">transparency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">annotations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">_saveFormat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;jpg&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">saveOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">JPEGSaveOptions</span><span class="p">();</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">embedColorProfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">formatOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FormatOptions</span><span class="p">.</span><span class="nx">STANDARDBASELINE</span><span class="p">;</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">matte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">MatteType</span><span class="p">.</span><span class="nx">WHITE</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">quality</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_qualityJPG</span><span class="p">;</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">_saveFormat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;psd&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">saveOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">PhotoshopSaveOptions</span><span class="p">();</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">alphaChannels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_alphaChannels</span><span class="p">;</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">annotations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">embedColorProfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">layers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_withLayers</span><span class="p">;</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">        </span><span class="nx">saveOptions</span><span class="p">.</span><span class="nx">spotColors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="nx">saveFile_v2</span><span class="p">(</span><span class="nx">_file</span><span class="p">,</span><span class="w"> </span><span class="nx">saveOptions</span><span class="p">,</span><span class="w"> </span><span class="nx">_asCopy</span><span class="p">);</span>
+<span class="linenos" data-linenos="29 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/save/saveMultiformat.js"></a></p>
+<div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
+<ul>
+<li>saveFile_v2</li>
+<li>saveMultiformat</li>
+</ul>
 </div>
 
 

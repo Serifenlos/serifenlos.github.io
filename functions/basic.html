@@ -1344,6 +1344,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#loadjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      loadJSON
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2653,6 +2662,15 @@
   <a href="#workingprofile_set" class="md-nav__link">
     <span class="md-ellipsis">
       workingProfile_set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      loadJSON
     </span>
   </a>
   
@@ -4796,8 +4814,39 @@ erstelle eine Farbfläche</p>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/workingProfile_set.js"></a></p>
-<div class="admonition warning hide">
+<h3 id="loadjson">loadJSON<a class="headerlink" href="#loadjson" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="loadJSON(filePath);"></button></p>
+<details>
+<summary>loadJSON(filePath);</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">loadJSON</span><span class="p">(</span><span class="nx">filePath</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="nx">filePath</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">content</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="nx">file</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">read</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="nx">file</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="c1">// Parse JSON-Inhalt</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Fehler beim Parsen der JSON-Datei:\n&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Die JSON-Datei konnte nicht gefunden werden.&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="21 "></span><span class="p">}</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/basic/loadJSON.js"></a></p>
+<div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
+<ul>
+<li>loadJSON</li>
+</ul>
 </div>
 
 

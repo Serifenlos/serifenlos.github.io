@@ -556,6 +556,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#removealphachannels" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeAlphaChannels
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1032,6 +1041,15 @@
   <a href="#channel_setsaturation_singlecolors_v2" class="md-nav__link">
     <span class="md-ellipsis">
       channel_setSaturation_singleColors_v2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removealphachannels" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeAlphaChannels
     </span>
   </a>
   
@@ -1919,8 +1937,33 @@
 </code></pre></div>
 </details>
 <p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/channel/channel_setSaturation_singleColors_v2.js"></a></p>
-<div class="admonition warning hide">
+<h3 id="removealphachannels">removeAlphaChannels<a class="headerlink" href="#removealphachannels" title="Permanent link">&para;</a></h3>
+<p class="btn_p"><button class="btn" data-clipboard-text="RemoveAlphaChannels();"></button></p>
+<details>
+<summary>RemoveAlphaChannels();</summary>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">RemoveAlphaChannels</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">channels</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">alphas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">channels</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">channels</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">channel</span><span class="p">.</span><span class="nx">kind</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">ChannelType</span><span class="p">.</span><span class="nx">COMPONENT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="nx">alphas</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">channel</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">alphas</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alphas</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="nx">channel</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span><span class="p">};</span>
+</code></pre></div>
+</details>
+<p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/channel/removeAlphaChannels.js"></a></p>
+<div class="admonition warning show">
 <p class="admonition-title">not documented functions</p>
+<ul>
+<li>removeAlphaChannels</li>
+</ul>
 </div>
 
 

@@ -3203,12 +3203,42 @@
 <p class="btn_p"><button class="btn" data-clipboard-text="isLayerFXVisible();"></button></p>
 <details>
 <summary>isLayerFXVisible();</summary>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">isLayerFXVisible</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">m_Ref01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionReference</span><span class="p">();</span>
-<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="nx">m_Ref01</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="w"> </span><span class="nx">sTID</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;layer&quot;</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="nx">cTID</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;Ordn&quot;</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="nx">cTID</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;Trgt&quot;</span><span class="w"> </span><span class="p">));</span>
-<span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">m_Dsc01</span><span class="o">=</span><span class="w"> </span><span class="nx">executeActionGet</span><span class="p">(</span><span class="w"> </span><span class="nx">m_Ref01</span><span class="w"> </span><span class="p">);</span>
-<span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">m_Dsc01</span><span class="p">.</span><span class="nx">getBoolean</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="s1">&#39;lfxv&#39;</span><span class="p">));</span>
-<span class="linenos" data-linenos="6 "></span><span class="w"> </span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cm">/* function isLayerFXVisible() {</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cm">    var m_Ref01 = new ActionReference();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cm">    m_Ref01.putEnumerated( sTID( &quot;layer&quot; ), cTID( &quot;Ordn&quot; ), cTID( &quot;Trgt&quot; ));</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="cm">    var m_Dsc01= executeActionGet( m_Ref01 );</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="cm">    return m_Dsc01.getBoolean(cTID(&#39;lfxv&#39;));</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="cm"> }</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="cm"> */</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">isLayerFXVisible</span><span class="p">(</span><span class="nx">_input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ActionReference</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">_input</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                </span><span class="c1">// by Index</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">_input</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">layer_checkExistence</span><span class="p">(</span><span class="nx">_input</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">         </span><span class="c1">// by Layername</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="nx">r</span><span class="p">.</span><span class="nx">putName</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s1">&#39;layer&#39;</span><span class="p">),</span><span class="w"> </span><span class="nx">_input</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">                                    </span><span class="c1">// by Layername via Regex // first hit</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="nx">r</span><span class="p">.</span><span class="nx">putIndex</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">layer_getIDXbyString</span><span class="p">(</span><span class="nx">_input</span><span class="p">)[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">_input</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;undefined&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">            </span><span class="c1">// by activeLayer</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">        </span><span class="nx">r</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layer&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;ordinal&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;targetEnum&quot;</span><span class="p">));</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">r</span><span class="p">).</span><span class="nx">getBoolean</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;layerFXVisible&quot;</span><span class="p">));</span><span class="w">    </span>
+<span class="linenos" data-linenos="32 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="33 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">debug</span><span class="p">)</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;ERROR - gotoLayer_bySelector: \n&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">)</span>
+<span class="linenos" data-linenos="34 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="35 "></span>
+<span class="linenos" data-linenos="36 "></span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/utils/isLayerFXVisible.js"></a></p>
@@ -3218,9 +3248,11 @@
 <details>
 <summary>copyLayerStyle();</summary>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">copyLayerStyle</span><span class="p">(){</span>
-<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">idCpFX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;CpFX&quot;</span><span class="w"> </span><span class="p">);</span>
-<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="nx">executeAction</span><span class="p">(</span><span class="w"> </span><span class="nx">idCpFX</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="w"> </span><span class="p">);</span>
-<span class="linenos" data-linenos="4 "></span><span class="w">  </span><span class="p">}</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="c1">// var idCpFX = charIDToTypeID( &quot;CpFX&quot; );</span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="c1">// executeAction( idCpFX, undefined, DialogModes.NO );</span>
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="nx">executeAction</span><span class="p">(</span><span class="nx">s2t</span><span class="p">(</span><span class="s2">&quot;copyEffects&quot;</span><span class="p">),</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="w"> </span><span class="p">);</span>
+<span class="linenos" data-linenos="6 "></span><span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p><a href="file:///Users/adrians/Arbeit/GitHub/SimonScript/source/_functions/utils/copyLayerStyle.js"></a></p>
